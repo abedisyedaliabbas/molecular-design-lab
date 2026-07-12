@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo URL Extractor</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: #f5f7fb;
+        }
+        .container {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #1f62ff;
+        }
+        .instructions {
+            background: #f0f4ff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            border-left: 4px solid #1f62ff;
+        }
+        .step {
+            margin: 1rem 0;
+            padding: 1rem;
+            background: #f9fafb;
+            border-radius: 6px;
+        }
+        .step-number {
+            display: inline-block;
+            background: #1f62ff;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 24px;
+            margin-right: 0.5rem;
+            font-weight: bold;
+        }
+        code {
+            background: #e5e7eb;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+        .url-box {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            padding: 1rem;
+            margin: 1rem 0;
+            font-family: monospace;
+            word-break: break-all;
+        }
+        .copy-btn {
+            background: #1f62ff;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 0.5rem;
+        }
+        .copy-btn:hover {
+            background: #1552d6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📸 Photo URL Extractor Guide</h1>
+        
+        <div class="instructions">
+            <h2>How to Extract Photos from Your Website</h2>
+            <p>Follow these steps to get the image URLs from your travel blog and news pages.</p>
+        </div>
+
+        <div class="step">
+            <span class="step-number">1</span>
+            <strong>Open Your Travel Blog</strong>
+            <p>Go to: <a href="https://www.syedaliabbasabedi.com/?page_id=114" target="_blank">https://www.syedaliabbasabedi.com/?page_id=114</a></p>
+        </div>
+
+        <div class="step">
+            <span class="step-number">2</span>
+            <strong>For Each Photo:</strong>
+            <ul>
+                <li>Right-click on the image</li>
+                <li>Select "Copy image address" or "Copy image URL"</li>
+                <li>The URL will look like: <code>https://www.syedaliabbasabedi.com/wp-content/uploads/2024/03/photo-name.jpg</code></li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <span class="step-number">3</span>
+            <strong>Match Photos to Locations</strong>
+            <p>Make sure each photo URL matches the correct country/location:</p>
+            <ul>
+                <li>Phuket → Phuket photo</li>
+                <li>Amsterdam → Amsterdam photo</li>
+                <li>Paris → Paris photo</li>
+                <li>Singapore → Singapore/Marina Bay photo</li>
+                <li>etc.</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <span class="step-number">4</span>
+            <strong>Update the Files</strong>
+            <p>Edit <code>assets/js/travel.js</code> and replace the empty <code>cover: ""</code> fields with your photo URLs.</p>
+            <p>For gallery photos, add them to the <code>travelGallery</code> array.</p>
+        </div>
+
+        <div class="step">
+            <span class="step-number">5</span>
+            <strong>Test</strong>
+            <p>Refresh your travel blog page to see if the photos load correctly.</p>
+        </div>
+
+        <h2 style="margin-top: 2rem;">Quick Reference</h2>
+        <div class="url-box">
+            <strong>Travel Blog:</strong> https://www.syedaliabbasabedi.com/?page_id=114<br>
+            <strong>News Page:</strong> https://www.syedaliabbasabedi.com/?page_id=48<br>
+            <strong>File to Edit:</strong> assets/js/travel.js
+        </div>
+
+        <h2 style="margin-top: 2rem;">Example Format</h2>
+        <div class="url-box">
+            <pre>{
+  title: "Phuket",
+  date: "March 2025",
+  location: "Phuket, Thailand",
+  cover: "https://www.syedaliabbasabedi.com/wp-content/uploads/2025/03/phuket.jpg",
+  // ... rest of the fields
+}</pre>
+        </div>
+    </div>
+</body>
+</html>
+
