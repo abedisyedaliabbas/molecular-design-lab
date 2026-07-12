@@ -27,125 +27,125 @@ const countries = [
 // Cities with place counts (organized by country)
 const cities = [
   // Pakistan
-  { name: "Lahore", country: "Pakistan", places: 265, timeAgo: "Today", cover: "assets/img/travel/lahore.jpg" },
-  { name: "Islamabad", country: "Pakistan", places: 3, timeAgo: "5 months ago", cover: "assets/img/travel/islamabad.jpg" },
-  { name: "Murree", country: "Pakistan", places: 1, timeAgo: "5 months ago", cover: "assets/img/travel/murree.jpg" },
-  { name: "Raiwind", country: "Pakistan", places: 1, timeAgo: "4 years ago", cover: "assets/img/travel/riyadh.jpg" },
+  { name: "Lahore", country: "Pakistan", places: 265, timeAgo: "Today", cover: "/abedi-research/assets/img/travel/lahore.jpg" },
+  { name: "Islamabad", country: "Pakistan", places: 3, timeAgo: "5 months ago", cover: "/abedi-research/assets/img/travel/islamabad.jpg" },
+  { name: "Murree", country: "Pakistan", places: 1, timeAgo: "5 months ago", cover: "/abedi-research/assets/img/travel/murree.jpg" },
+  { name: "Raiwind", country: "Pakistan", places: 1, timeAgo: "4 years ago", cover: "/abedi-research/assets/img/travel/riyadh.jpg" },
   
   // Singapore
-  { name: "Singapore", country: "Singapore", places: 449, timeAgo: "Last week", cover: "assets/img/travel/marina-bay.jpg" },
+  { name: "Singapore", country: "Singapore", places: 449, timeAgo: "Last week", cover: "/abedi-research/assets/img/travel/marina-bay.jpg" },
   
   // Malaysia
-  { name: "Johor Bahru", country: "Malaysia", places: 64, timeAgo: "3 weeks ago", cover: "assets/img/travel/kuala-lumpur.jpg" },
-  { name: "Kuala Lumpur", country: "Malaysia", places: 5, timeAgo: "3 years ago", cover: "assets/img/travel/kuala-lumpur.jpg" },
-  { name: "Subang Jaya", country: "Malaysia", places: 10, timeAgo: "3 years ago", cover: "assets/img/travel/kuala-lumpur.jpg" },
-  { name: "Petaling Jaya", country: "Malaysia", places: 4, timeAgo: "3 years ago", cover: "assets/img/travel/kuala-lumpur.jpg" },
-  { name: "Pattaya City", country: "Malaysia", places: 6, timeAgo: "3 years ago", cover: "assets/img/travel/bangkok.jpg" },
-  { name: "Batu Caves", country: "Malaysia", places: 1, timeAgo: "3 years ago", cover: "assets/img/travel/kuala-lumpur.jpg" },
-  { name: "Gelang Patah", country: "Malaysia", places: 4, timeAgo: "10 months ago", cover: "assets/img/travel/kuala-lumpur.jpg" },
-  { name: "San Donato Milanese", country: "Malaysia", places: 13, timeAgo: "11 months ago", cover: "assets/img/travel/milan.jpg" },
+  { name: "Johor Bahru", country: "Malaysia", places: 64, timeAgo: "3 weeks ago", cover: "/abedi-research/assets/img/travel/kuala-lumpur.jpg" },
+  { name: "Kuala Lumpur", country: "Malaysia", places: 5, timeAgo: "3 years ago", cover: "/abedi-research/assets/img/travel/kuala-lumpur.jpg" },
+  { name: "Subang Jaya", country: "Malaysia", places: 10, timeAgo: "3 years ago", cover: "/abedi-research/assets/img/travel/kuala-lumpur.jpg" },
+  { name: "Petaling Jaya", country: "Malaysia", places: 4, timeAgo: "3 years ago", cover: "/abedi-research/assets/img/travel/kuala-lumpur.jpg" },
+  { name: "Pattaya City", country: "Malaysia", places: 6, timeAgo: "3 years ago", cover: "/abedi-research/assets/img/travel/bangkok.jpg" },
+  { name: "Batu Caves", country: "Malaysia", places: 1, timeAgo: "3 years ago", cover: "/abedi-research/assets/img/travel/kuala-lumpur.jpg" },
+  { name: "Gelang Patah", country: "Malaysia", places: 4, timeAgo: "10 months ago", cover: "/abedi-research/assets/img/travel/kuala-lumpur.jpg" },
+  { name: "San Donato Milanese", country: "Malaysia", places: 13, timeAgo: "11 months ago", cover: "/abedi-research/assets/img/travel/milan.jpg" },
   
   // Thailand
-  { name: "Bangkok", country: "Thailand", places: 26, timeAgo: "7 months ago", cover: "assets/img/travel/bangkok.jpg" },
-  { name: "Phuket", country: "Thailand", places: 4, timeAgo: "8 months ago", cover: "assets/img/travel/phuket.jpg" },
-  { name: "Mai Khao", country: "Thailand", places: 1, timeAgo: "7 months ago", cover: "assets/img/travel/phuket.jpg" },
-  { name: "Nong Prue", country: "Thailand", places: 1, timeAgo: "7 months ago", cover: "assets/img/travel/bangkok.jpg" },
-  { name: "Thep Krasatti", country: "Thailand", places: 1, timeAgo: "7 months ago", cover: "assets/img/travel/phuket.jpg" },
-  { name: "Ratsada", country: "Thailand", places: 1, timeAgo: "7 months ago", cover: "assets/img/travel/phuket.jpg" },
-  { name: "Wichit", country: "Thailand", places: 4, timeAgo: "7 months ago", cover: "assets/img/travel/phuket.jpg" },
-  { name: "Chalong", country: "Thailand", places: 6, timeAgo: "7 months ago", cover: "assets/img/travel/phuket.jpg" },
-  { name: "Kathu", country: "Thailand", places: 1, timeAgo: "8 months ago", cover: "assets/img/travel/phuket.jpg" },
-  { name: "Pa Tong", country: "Thailand", places: 4, timeAgo: "8 months ago", cover: "assets/img/travel/phuket.jpg" },
-  { name: "Rawai", country: "Thailand", places: 1, timeAgo: "8 months ago", cover: "assets/img/travel/phuket.jpg" },
-  { name: "Phra Nakhon Si Ayutthaya", country: "Thailand", places: 2, timeAgo: "8 months ago", cover: "assets/img/travel/bangkok.jpg" },
-  { name: "Khlong Chik", country: "Thailand", places: 1, timeAgo: "8 months ago", cover: "assets/img/travel/bangkok.jpg" },
+  { name: "Bangkok", country: "Thailand", places: 26, timeAgo: "7 months ago", cover: "/abedi-research/assets/img/travel/bangkok.jpg" },
+  { name: "Phuket", country: "Thailand", places: 4, timeAgo: "8 months ago", cover: "/abedi-research/assets/img/travel/phuket.jpg" },
+  { name: "Mai Khao", country: "Thailand", places: 1, timeAgo: "7 months ago", cover: "/abedi-research/assets/img/travel/phuket.jpg" },
+  { name: "Nong Prue", country: "Thailand", places: 1, timeAgo: "7 months ago", cover: "/abedi-research/assets/img/travel/bangkok.jpg" },
+  { name: "Thep Krasatti", country: "Thailand", places: 1, timeAgo: "7 months ago", cover: "/abedi-research/assets/img/travel/phuket.jpg" },
+  { name: "Ratsada", country: "Thailand", places: 1, timeAgo: "7 months ago", cover: "/abedi-research/assets/img/travel/phuket.jpg" },
+  { name: "Wichit", country: "Thailand", places: 4, timeAgo: "7 months ago", cover: "/abedi-research/assets/img/travel/phuket.jpg" },
+  { name: "Chalong", country: "Thailand", places: 6, timeAgo: "7 months ago", cover: "/abedi-research/assets/img/travel/phuket.jpg" },
+  { name: "Kathu", country: "Thailand", places: 1, timeAgo: "8 months ago", cover: "/abedi-research/assets/img/travel/phuket.jpg" },
+  { name: "Pa Tong", country: "Thailand", places: 4, timeAgo: "8 months ago", cover: "/abedi-research/assets/img/travel/phuket.jpg" },
+  { name: "Rawai", country: "Thailand", places: 1, timeAgo: "8 months ago", cover: "/abedi-research/assets/img/travel/phuket.jpg" },
+  { name: "Phra Nakhon Si Ayutthaya", country: "Thailand", places: 2, timeAgo: "8 months ago", cover: "/abedi-research/assets/img/travel/bangkok.jpg" },
+  { name: "Khlong Chik", country: "Thailand", places: 1, timeAgo: "8 months ago", cover: "/abedi-research/assets/img/travel/bangkok.jpg" },
   
   // Italy
-  { name: "Torino", country: "Italy", places: 8, timeAgo: "2 weeks ago", cover: "assets/img/travel/Torino.jpg" },
-  { name: "Milan", country: "Italy", places: 13, timeAgo: "11 months ago", cover: "assets/img/travel/milan.jpg" },
-  { name: "Venice", country: "Italy", places: 7, timeAgo: "2 years ago", cover: "assets/img/travel/venice.jpg" },
-  { name: "Padua", country: "Italy", places: 1, timeAgo: "2 years ago", cover: "assets/img/travel/venice.jpg" },
-  { name: "Cambridge", country: "Italy", places: 2, timeAgo: "2 years ago", cover: "assets/img/travel/london.jpg" },
-  { name: "Rozzano", country: "Italy", places: 4, timeAgo: "2 years ago", cover: "assets/img/travel/milan.jpg" },
-  { name: "Como", country: "Italy", places: 3, timeAgo: "2 years ago", cover: "assets/img/travel/milan.jpg" },
-  { name: "Brunate", country: "Italy", places: 1, timeAgo: "2 years ago", cover: "assets/img/travel/milan.jpg" },
-  { name: "Brescia", country: "Italy", places: 1, timeAgo: "11 months ago", cover: "assets/img/travel/milan.jpg" },
-  { name: "San Giuliano Milanese", country: "Italy", places: 5, timeAgo: "11 months ago", cover: "assets/img/travel/milan.jpg" },
+  { name: "Torino", country: "Italy", places: 8, timeAgo: "2 weeks ago", cover: "/abedi-research/assets/img/travel/Torino.jpg" },
+  { name: "Milan", country: "Italy", places: 13, timeAgo: "11 months ago", cover: "/abedi-research/assets/img/travel/milan.jpg" },
+  { name: "Venice", country: "Italy", places: 7, timeAgo: "2 years ago", cover: "/abedi-research/assets/img/travel/venice.jpg" },
+  { name: "Padua", country: "Italy", places: 1, timeAgo: "2 years ago", cover: "/abedi-research/assets/img/travel/venice.jpg" },
+  { name: "Cambridge", country: "Italy", places: 2, timeAgo: "2 years ago", cover: "/abedi-research/assets/img/travel/london.jpg" },
+  { name: "Rozzano", country: "Italy", places: 4, timeAgo: "2 years ago", cover: "/abedi-research/assets/img/travel/milan.jpg" },
+  { name: "Como", country: "Italy", places: 3, timeAgo: "2 years ago", cover: "/abedi-research/assets/img/travel/milan.jpg" },
+  { name: "Brunate", country: "Italy", places: 1, timeAgo: "2 years ago", cover: "/abedi-research/assets/img/travel/milan.jpg" },
+  { name: "Brescia", country: "Italy", places: 1, timeAgo: "11 months ago", cover: "/abedi-research/assets/img/travel/milan.jpg" },
+  { name: "San Giuliano Milanese", country: "Italy", places: 5, timeAgo: "11 months ago", cover: "/abedi-research/assets/img/travel/milan.jpg" },
   
   // Netherlands
-  { name: "Amsterdam", country: "Netherlands", places: 9, timeAgo: "11 months ago", cover: "assets/img/travel/amsterdam.jpg" },
-  { name: "Schiphol", country: "Netherlands", places: 2, timeAgo: "11 months ago", cover: "assets/img/travel/amsterdam.jpg" },
+  { name: "Amsterdam", country: "Netherlands", places: 9, timeAgo: "11 months ago", cover: "/abedi-research/assets/img/travel/amsterdam.jpg" },
+  { name: "Schiphol", country: "Netherlands", places: 2, timeAgo: "11 months ago", cover: "/abedi-research/assets/img/travel/amsterdam.jpg" },
   
   // France
-  { name: "Paris", country: "France", places: 11, timeAgo: "11 months ago", cover: "assets/img/travel/paris.jpg" },
-  { name: "Montrouge", country: "France", places: 1, timeAgo: "11 months ago", cover: "assets/img/travel/paris.jpg" },
-  { name: "Malakoff", country: "France", places: 2, timeAgo: "11 months ago", cover: "assets/img/travel/paris.jpg" },
+  { name: "Paris", country: "France", places: 11, timeAgo: "11 months ago", cover: "/abedi-research/assets/img/travel/paris.jpg" },
+  { name: "Montrouge", country: "France", places: 1, timeAgo: "11 months ago", cover: "/abedi-research/assets/img/travel/paris.jpg" },
+  { name: "Malakoff", country: "France", places: 2, timeAgo: "11 months ago", cover: "/abedi-research/assets/img/travel/paris.jpg" },
   
   // United Kingdom
-  { name: "London", country: "United Kingdom", places: 47, timeAgo: "Last year", cover: "assets/img/travel/london.jpg" },
-  { name: "Liverpool", country: "United Kingdom", places: 8, timeAgo: "Last year", cover: "assets/img/travel/liverpool.jpg" },
-  { name: "Reading", country: "United Kingdom", places: 9, timeAgo: "Last year", cover: "assets/img/travel/london.jpg" },
-  { name: "Barking", country: "United Kingdom", places: 2, timeAgo: "Last year", cover: "assets/img/travel/london.jpg" },
-  { name: "Leicester Forest East", country: "United Kingdom", places: 1, timeAgo: "Last year", cover: "assets/img/travel/london.jpg" },
-  { name: "Wembley", country: "United Kingdom", places: 23, timeAgo: "2 years ago", cover: "assets/img/travel/london.jpg" },
-  { name: "Horley", country: "United Kingdom", places: 3, timeAgo: "2 years ago", cover: "assets/img/travel/london.jpg" },
-  { name: "Wythall", country: "United Kingdom", places: 1, timeAgo: "Last year", cover: "assets/img/travel/london.jpg" },
-  { name: "Southall", country: "United Kingdom", places: 2, timeAgo: "Last year", cover: "assets/img/travel/london.jpg" },
-  { name: "Masai", country: "United Kingdom", places: 1, timeAgo: "Last year", cover: "assets/img/travel/london.jpg" },
+  { name: "London", country: "United Kingdom", places: 47, timeAgo: "Last year", cover: "/abedi-research/assets/img/travel/london.jpg" },
+  { name: "Liverpool", country: "United Kingdom", places: 8, timeAgo: "Last year", cover: "/abedi-research/assets/img/travel/liverpool.jpg" },
+  { name: "Reading", country: "United Kingdom", places: 9, timeAgo: "Last year", cover: "/abedi-research/assets/img/travel/london.jpg" },
+  { name: "Barking", country: "United Kingdom", places: 2, timeAgo: "Last year", cover: "/abedi-research/assets/img/travel/london.jpg" },
+  { name: "Leicester Forest East", country: "United Kingdom", places: 1, timeAgo: "Last year", cover: "/abedi-research/assets/img/travel/london.jpg" },
+  { name: "Wembley", country: "United Kingdom", places: 23, timeAgo: "2 years ago", cover: "/abedi-research/assets/img/travel/london.jpg" },
+  { name: "Horley", country: "United Kingdom", places: 3, timeAgo: "2 years ago", cover: "/abedi-research/assets/img/travel/london.jpg" },
+  { name: "Wythall", country: "United Kingdom", places: 1, timeAgo: "Last year", cover: "/abedi-research/assets/img/travel/london.jpg" },
+  { name: "Southall", country: "United Kingdom", places: 2, timeAgo: "Last year", cover: "/abedi-research/assets/img/travel/london.jpg" },
+  { name: "Masai", country: "United Kingdom", places: 1, timeAgo: "Last year", cover: "/abedi-research/assets/img/travel/london.jpg" },
   
   // United Arab Emirates
-  { name: "Dubai", country: "United Arab Emirates", places: 11, timeAgo: "Last year", cover: "assets/img/travel/dubai.jpg" },
-  { name: "Sharjah", country: "United Arab Emirates", places: 1, timeAgo: "Last year", cover: "assets/img/travel/dubai.jpg" },
-  { name: "Ajman", country: "United Arab Emirates", places: 6, timeAgo: "Last year", cover: "assets/img/travel/dubai.jpg" },
+  { name: "Dubai", country: "United Arab Emirates", places: 11, timeAgo: "Last year", cover: "/abedi-research/assets/img/travel/dubai.jpg" },
+  { name: "Sharjah", country: "United Arab Emirates", places: 1, timeAgo: "Last year", cover: "/abedi-research/assets/img/travel/dubai.jpg" },
+  { name: "Ajman", country: "United Arab Emirates", places: 6, timeAgo: "Last year", cover: "/abedi-research/assets/img/travel/dubai.jpg" },
   
   // Saudi Arabia
-  { name: "Riyadh", country: "Saudi Arabia", places: 8, timeAgo: "2 years ago", cover: "assets/img/travel/riyadh.jpg" },
-  { name: "Makkah", country: "Saudi Arabia", places: 5, timeAgo: "2 years ago", cover: "assets/img/travel/riyadh.jpg" },
-  { name: "Madinah", country: "Saudi Arabia", places: 10, timeAgo: "2 years ago", cover: "assets/img/travel/riyadh.jpg" },
-  { name: "Al Abyar", country: "Saudi Arabia", places: 1, timeAgo: "2 years ago", cover: "assets/img/travel/riyadh.jpg" },
-  { name: "Al Bukayriyah", country: "Saudi Arabia", places: 1, timeAgo: "2 years ago", cover: "assets/img/travel/riyadh.jpg" },
-  { name: "Taif", country: "Saudi Arabia", places: 1, timeAgo: "2 years ago", cover: "assets/img/travel/riyadh.jpg" },
+  { name: "Riyadh", country: "Saudi Arabia", places: 8, timeAgo: "2 years ago", cover: "/abedi-research/assets/img/travel/riyadh.jpg" },
+  { name: "Makkah", country: "Saudi Arabia", places: 5, timeAgo: "2 years ago", cover: "/abedi-research/assets/img/travel/riyadh.jpg" },
+  { name: "Madinah", country: "Saudi Arabia", places: 10, timeAgo: "2 years ago", cover: "/abedi-research/assets/img/travel/riyadh.jpg" },
+  { name: "Al Abyar", country: "Saudi Arabia", places: 1, timeAgo: "2 years ago", cover: "/abedi-research/assets/img/travel/riyadh.jpg" },
+  { name: "Al Bukayriyah", country: "Saudi Arabia", places: 1, timeAgo: "2 years ago", cover: "/abedi-research/assets/img/travel/riyadh.jpg" },
+  { name: "Taif", country: "Saudi Arabia", places: 1, timeAgo: "2 years ago", cover: "/abedi-research/assets/img/travel/riyadh.jpg" },
   
   // Australia
-  { name: "Melbourne", country: "Australia", places: 18, timeAgo: "2 years ago", cover: "assets/img/travel/melbourne.jpg" },
+  { name: "Melbourne", country: "Australia", places: 18, timeAgo: "2 years ago", cover: "/abedi-research/assets/img/travel/melbourne.jpg" },
   
   // Türkiye
-  { name: "Istanbul", country: "Türkiye", places: 2, timeAgo: "2 years ago", cover: "assets/img/travel/istanbul.jpg" },
+  { name: "Istanbul", country: "Türkiye", places: 2, timeAgo: "2 years ago", cover: "/abedi-research/assets/img/travel/istanbul.jpg" },
   
   // Qatar
-  { name: "Doha", country: "Qatar", places: 1, timeAgo: "2 years ago", cover: "assets/img/travel/dubai.jpg" },
+  { name: "Doha", country: "Qatar", places: 1, timeAgo: "2 years ago", cover: "/abedi-research/assets/img/travel/dubai.jpg" },
   
   // Iraq
-  { name: "Baghdad", country: "Iraq", places: 1, timeAgo: "2 years ago", cover: "assets/img/travel/riyadh.jpg" },
+  { name: "Baghdad", country: "Iraq", places: 1, timeAgo: "2 years ago", cover: "/abedi-research/assets/img/travel/riyadh.jpg" },
   
   // Germany
-  { name: "Dresden", country: "Germany", places: 5, timeAgo: "3 years ago", cover: "assets/img/travel/dresden.jpg" },
-  { name: "Oldenburg", country: "Germany", places: 5, timeAgo: "2 years ago", cover: "assets/img/travel/oldenburg.jpg" },
-  { name: "Bremen", country: "Germany", places: 1, timeAgo: "2 years ago", cover: "assets/img/travel/oldenburg.jpg" },
-  { name: "Verden", country: "Germany", places: 1, timeAgo: "3 years ago", cover: "assets/img/travel/oldenburg.jpg" },
-  { name: "Hanover", country: "Germany", places: 1, timeAgo: "3 years ago", cover: "assets/img/travel/oldenburg.jpg" },
-  { name: "Magdeburg", country: "Germany", places: 1, timeAgo: "3 years ago", cover: "assets/img/travel/dresden.jpg" },
-  { name: "Halle (Saale)", country: "Germany", places: 1, timeAgo: "3 years ago", cover: "assets/img/travel/dresden.jpg" },
-  { name: "Leipzig", country: "Germany", places: 1, timeAgo: "3 years ago", cover: "assets/img/travel/dresden.jpg" },
-  { name: "Sepang", country: "Germany", places: 2, timeAgo: "2 years ago", cover: "assets/img/travel/dresden.jpg" },
+  { name: "Dresden", country: "Germany", places: 5, timeAgo: "3 years ago", cover: "/abedi-research/assets/img/travel/dresden.jpg" },
+  { name: "Oldenburg", country: "Germany", places: 5, timeAgo: "2 years ago", cover: "/abedi-research/assets/img/travel/oldenburg.jpg" },
+  { name: "Bremen", country: "Germany", places: 1, timeAgo: "2 years ago", cover: "/abedi-research/assets/img/travel/oldenburg.jpg" },
+  { name: "Verden", country: "Germany", places: 1, timeAgo: "3 years ago", cover: "/abedi-research/assets/img/travel/oldenburg.jpg" },
+  { name: "Hanover", country: "Germany", places: 1, timeAgo: "3 years ago", cover: "/abedi-research/assets/img/travel/oldenburg.jpg" },
+  { name: "Magdeburg", country: "Germany", places: 1, timeAgo: "3 years ago", cover: "/abedi-research/assets/img/travel/dresden.jpg" },
+  { name: "Halle (Saale)", country: "Germany", places: 1, timeAgo: "3 years ago", cover: "/abedi-research/assets/img/travel/dresden.jpg" },
+  { name: "Leipzig", country: "Germany", places: 1, timeAgo: "3 years ago", cover: "/abedi-research/assets/img/travel/dresden.jpg" },
+  { name: "Sepang", country: "Germany", places: 2, timeAgo: "2 years ago", cover: "/abedi-research/assets/img/travel/dresden.jpg" },
   
   // Czechia
-  { name: "Prague", country: "Czechia", places: 1, timeAgo: "3 years ago", cover: "assets/img/travel/prague.jpg" },
+  { name: "Prague", country: "Czechia", places: 1, timeAgo: "3 years ago", cover: "/abedi-research/assets/img/travel/prague.jpg" },
   
   // Denmark
-  { name: "Copenhagen", country: "Denmark", places: 4, timeAgo: "4 years ago", cover: "assets/img/travel/copenhagen.jpg" },
-  { name: "Kastrup", country: "Denmark", places: 1, timeAgo: "4 years ago", cover: "assets/img/travel/copenhagen.jpg" },
-  { name: "Lyngby", country: "Denmark", places: 8, timeAgo: "4 years ago", cover: "assets/img/travel/copenhagen.jpg" },
-  { name: "Hvidovre", country: "Denmark", places: 1, timeAgo: "4 years ago", cover: "assets/img/travel/copenhagen.jpg" },
-  { name: "Brøndby Strand", country: "Denmark", places: 2, timeAgo: "4 years ago", cover: "assets/img/travel/copenhagen.jpg" },
-  { name: "Glostrup", country: "Denmark", places: 2, timeAgo: "4 years ago", cover: "assets/img/travel/copenhagen.jpg" },
-  { name: "Gentofte", country: "Denmark", places: 1, timeAgo: "4 years ago", cover: "assets/img/travel/copenhagen.jpg" },
+  { name: "Copenhagen", country: "Denmark", places: 4, timeAgo: "4 years ago", cover: "/abedi-research/assets/img/travel/copenhagen.jpg" },
+  { name: "Kastrup", country: "Denmark", places: 1, timeAgo: "4 years ago", cover: "/abedi-research/assets/img/travel/copenhagen.jpg" },
+  { name: "Lyngby", country: "Denmark", places: 8, timeAgo: "4 years ago", cover: "/abedi-research/assets/img/travel/copenhagen.jpg" },
+  { name: "Hvidovre", country: "Denmark", places: 1, timeAgo: "4 years ago", cover: "/abedi-research/assets/img/travel/copenhagen.jpg" },
+  { name: "Brøndby Strand", country: "Denmark", places: 2, timeAgo: "4 years ago", cover: "/abedi-research/assets/img/travel/copenhagen.jpg" },
+  { name: "Glostrup", country: "Denmark", places: 2, timeAgo: "4 years ago", cover: "/abedi-research/assets/img/travel/copenhagen.jpg" },
+  { name: "Gentofte", country: "Denmark", places: 1, timeAgo: "4 years ago", cover: "/abedi-research/assets/img/travel/copenhagen.jpg" },
   
   // Hong Kong
-  { name: "Hong Kong", country: "Hong Kong", places: 8, timeAgo: "2 years ago", cover: "assets/img/travel/hong-kong.jpg" },
+  { name: "Hong Kong", country: "Hong Kong", places: 8, timeAgo: "2 years ago", cover: "/abedi-research/assets/img/travel/hong-kong.jpg" },
   
   // Bahrain
-  { name: "Manama", country: "Bahrain", places: 1, timeAgo: "11 months ago", cover: "assets/img/travel/dubai.jpg" },
+  { name: "Manama", country: "Bahrain", places: 1, timeAgo: "11 months ago", cover: "/abedi-research/assets/img/travel/dubai.jpg" },
 ];
 
 // Travel blog posts with full narratives
@@ -154,7 +154,7 @@ const travelBlogPosts = [
     city: "Torino",
     date: "March 2026",
     country: "Italy",
-    cover: "assets/img/travel/Torino.jpg",
+    cover: "/abedi-research/assets/img/travel/Torino.jpg",
     content: `My recent visit to Torino was a beautiful blend of science, culture, and inspiration. I attended the 6th International Conference on Fluorescent Biomolecules and their Building Blocks (FB3), where I presented my work and had meaningful conversations with researchers from around the world.
 
 The conference atmosphere was warm, collaborative, and energizing. I am grateful to the organizing team for creating such a thoughtful and well-run event that encouraged both rigorous discussion and genuine connection.
@@ -165,7 +165,7 @@ Outside the conference sessions, Torino was unforgettable. The city's architectu
     city: "Phuket",
     date: "March 2025",
     country: "Thailand",
-    cover: "assets/img/travel/phuket.jpg",
+    cover: "/abedi-research/assets/img/travel/phuket.jpg",
     content: `In March 2025, I found myself on the sun-kissed island of Phuket, accompanied by a close friend who is soon embarking on a new chapter in Groningen, Netherlands. What was intended as a short retreat unfolded into a rich experience of freedom, flavor, and discovery that only a place like Phuket could offer.
 
 We rented a motorbike for the day, a decision that added an element of thrill and spontaneity to our island adventure. The open roads led us through winding coastal paths, under the shade of palm-lined stretches, and past golden beaches where the sea seemed to shimmer with infinite calm. Riding across the island with the breeze on our faces and no particular destination in mind was liberating, a reminder of how travel can reconnect us with a sense of play and presence.
@@ -178,7 +178,7 @@ And then there's the food, Thai cuisine in its home context is nothing short of 
     city: "Amsterdam",
     date: "December 2024",
     country: "Netherlands",
-    cover: "assets/img/travel/amsterdam.jpg",
+    cover: "/abedi-research/assets/img/travel/amsterdam.jpg",
     content: `December 2024 whisked me away to Amsterdam, a city renowned for its artistic heritage, intricate canal system, and a broad spectrum of cultural attractions. From the moment I stepped onto its bustling streets, Amsterdam embraced me with its unique charm and lively spirit.
 
 Navigating through the city, the historic canals served as my guide, leading me through neighborhoods filled with narrow, gabled houses that speak of a rich maritime history. The tranquility of the waterways contrasted sharply with the vibrant life on the streets, where cyclists whizzed by, adding to the dynamic energy of the city.
@@ -189,7 +189,7 @@ A visit to the Van Gogh Museum was a highlight, where I immersed myself in the s
     city: "Paris",
     date: "December 2024",
     country: "France",
-    cover: "assets/img/travel/paris.jpg",
+    cover: "/abedi-research/assets/img/travel/paris.jpg",
     content: `December 2024 brought me to the enchanting city of Paris, marking my first non-conference visit to this iconic destination. Paris, with its timeless beauty and romantic ambiance, was everything I had imagined and more. The city's streets, lined with historic architecture and illuminated by the gentle glow of street lamps, invited endless exploration.
 
 During my stay, I wandered through the cobbled lanes of Montmartre, indulged in the artistic splendor of the Louvre, and enjoyed the breathtaking views from atop the Eiffel Tower. Each moment in Paris felt like a step through a living museum, rich with art, history, and culture.
@@ -202,7 +202,7 @@ Returning to Singapore, I carried with me not just souvenirs, but a treasure tro
     city: "Liverpool",
     date: "July 2024",
     country: "United Kingdom",
-    cover: "assets/img/travel/liverpool.jpg",
+    cover: "/abedi-research/assets/img/travel/liverpool.jpg",
     content: `In July 2024, my journey took me to the vibrant city of Liverpool, a trip that began with my friend Faran picking me up from Heathrow. Together, we embarked on a scenic drive to Reading before reaching our final destination in Liverpool. The city, famous for its rich musical heritage and as the birthplace of The Beatles, was buzzing with energy and history.
 
 Our time in Liverpool coincided with a conference, blending professional engagements with leisure exploration. Amidst the academic discussions, we seized every opportunity to soak in the local culture and iconic landmarks. One of the highlights was our visit to The Beatles Statue on the waterfront, a symbolic spot that offers a panoramic view of the Mersey.
@@ -213,7 +213,7 @@ But Liverpool offered more than just musical nostalgia. The city's architecture,
     city: "Hong Kong",
     date: "2024",
     country: "Hong Kong",
-    cover: "assets/img/travel/hong-kong.jpg",
+    cover: "/abedi-research/assets/img/travel/hong-kong.jpg",
     content: `Have you ever wondered what it's like to walk the streets of Tokyo at night, surrounded by the neon glow of limitless possibility? Imagine, then, the vibrant streets of Hong Kong, where the scene morphs into an almost cinematic backdrop just after a refreshing rain shower. The streets glisten under the effervescent lights of the city, reflecting myriad colors on the slick pavement that just minutes ago was a canvas for the gentle drizzle.
 
 As I wandered through the bustling districts, the cool breeze carried with it the rich, earthy scent of rain-soaked concrete, a stark contrast to the day's earlier humidity. Around me, the city hadn't missed a beat; people with umbrellas in one hand and smartphones in the other darted in and out of the neon-lit shops and eateries, their conversations a melodious blend of Cantonese and snippets of other world languages. Each street corner was a blend of the traditional and the ultra-modern, from fragrant street food stalls offering warm, inviting dim sum, to towering digital billboards advertising the latest tech.
@@ -224,7 +224,7 @@ This night walk wasn't just a simple stroll; it was a dive into the heart of Hon
     city: "Melbourne",
     date: "November 2023",
     country: "Australia",
-    cover: "assets/img/travel/melbourne.jpg",
+    cover: "/abedi-research/assets/img/travel/melbourne.jpg",
     content: `My journey took me to the more temperate climes of Melbourne, where the serene Yarra River winds its way through the city before meeting the sea. Here, the mornings hold a different kind of magic, especially along the coastal walkways where the river's gentle flow accompanies runners and walkers alike.
 
 Each morning, as the first light painted the sky in hues of soft pinks and deep blues, I joined the locals on their runs along the wooden boardwalks that line the coast. The rhythmic sound of footsteps on wood mingled with the distant calls of seabirds, creating a tranquil soundtrack to our collective movement. People with their dogs, jogging or strolling, shared smiles and greetings, adding a warm, communal feel to the crisp morning air.
@@ -237,7 +237,7 @@ Melbourne's serene mornings offered a stark contrast to the nocturnal energy of 
     city: "London",
     date: "March - August 2023",
     country: "United Kingdom",
-    cover: "assets/img/travel/london.jpg",
+    cover: "/abedi-research/assets/img/travel/london.jpg",
     content: `From the airy coastlines of Melbourne, my journey next swept me into the bustling heart of London. The city, ever a tapestry of history and modernity, welcomed me with its iconic blend of gray skies and the steadfast grandeur of its architecture. In London, every street corner tells a story, every cobblestone holds a secret.
 
 My days were filled with the city's palpable energy, as I navigated through the bustling crowds of Piccadilly Circus and the serene pathways of Hyde Park. The imposing presence of Big Ben, the architectural elegance of the Houses of Parliament, and the bustling diversity of Camden Market, each site was a chapter of its own in the vast urban narrative that is London.
@@ -256,7 +256,7 @@ The few months I spent in London were transformative, adding layers of cultural 
     city: "Milan",
     date: "2023",
     country: "Italy",
-    cover: "assets/img/travel/milan.jpg",
+    cover: "/abedi-research/assets/img/travel/milan.jpg",
     content: `After London, my journey brought me to the warm, sunlit streets of Milan, a striking contrast to the cooler climes I had left behind. This city, known for its rich history and vibrant culture, welcomed me with open arms. Staying with my brother and his family, including my beloved niece Hayal, made my visit even more special. We wandered through bustling piazzas and quiet, cobbled lanes, soaking up the lively Italian spirit that permeates every corner.
 
 Milan's culinary scene was a particular delight. From creamy risottos to perfectly al dente pasta and the crisp crusts of wood-fired pizzas, each meal was a celebration of flavors. The local gelato shops, with their myriad of rich flavors, became a daily treat, as irresistible as the city's renowned fashion boutiques.
@@ -267,7 +267,7 @@ Exploring Milan with family by my side offered a unique perspective on the city'
     city: "Venice",
     date: "2023",
     country: "Italy",
-    cover: "assets/img/travel/venice.jpg",
+    cover: "/abedi-research/assets/img/travel/venice.jpg",
     content: `From the bustling streets of Milan, my travels next swept me into the dreamlike embrace of Venice. This city, almost floating on its network of canals, offered an entirely different magic. Every corner turned and every canal crossed revealed scenes straight out of a painting, with historic buildings reflecting gently in the shimmering water.
 
 Navigating Venice was an adventure in itself. I chose to cycle along its narrow paths, an exhilarating way to explore the city's hidden gems and iconic landmarks. The absence of cars, replaced by the gentle lapping of canal waters, made cycling both peaceful and intimate.
@@ -278,7 +278,7 @@ A highlight of my time in Venice was indulging in the local cuisine, particularl
     city: "Copenhagen",
     date: "2022",
     country: "Denmark",
-    cover: "assets/img/travel/copenhagen.jpg",
+    cover: "/abedi-research/assets/img/travel/copenhagen.jpg",
     content: `My journey brought me north to the charming streets of Copenhagen, Denmark. The city greeted me with its renowned Scandinavian flair, minimalist yet colorful architecture, expansive green parks, and a palpable sense of design in everything from coffee shops to public spaces.
 
 Copenhagen's beauty was matched by the friendliness of its people. The Danes, with their tall stature and bright smiles, were incredibly welcoming, making me feel at home amidst the breezy, bicycle-friendly boulevards. It was easy to see why this city is often celebrated for its quality of life.
@@ -291,7 +291,7 @@ The Scandinavian feel of the city, its clean streets, its casual yet fashionable
     city: "Dubai",
     date: "2022",
     country: "United Arab Emirates",
-    cover: "assets/img/travel/dubai.jpg",
+    cover: "/abedi-research/assets/img/travel/dubai.jpg",
     content: `I also took a tour to the dazzling city of Dubai to visit my sister and her beautiful daughter, Soha. Dubai stood as a testament to human ingenuity, a city carved out of the desert, now a bustling metropolis where skyscrapers stretch towards the sky and luxury echoes in its air.
 
 The city's transformation from arid sands to a vibrant oasis is nothing short of mesmerizing. In Dubai, every street corner tells the story of ambition and innovation, from the towering Burj Khalifa to the sprawling malls that are a shopper's paradise. Yet, it's the diversity of its people that truly defines Dubai. Here, cultures from every corner of the globe converge, creating a melting pot of traditions, cuisines, and languages.
@@ -302,7 +302,7 @@ Spending time with my sister and niece in this futuristic landscape brought a co
     city: "Istanbul",
     date: "2022",
     country: "Türkiye",
-    cover: "assets/img/travel/istanbul.jpg",
+    cover: "/abedi-research/assets/img/travel/istanbul.jpg",
     content: `Istanbul, a city that straddles two continents, is unlike any other place I've visited in Europe. Its streets, alive with the soft pattering of countless cats, wind through neighborhoods lined with ancient, cobblestone pavements. Each corner of the city offers a new treasure, from the grandeur of the Blue Mosque to the bustling bazaars filled with a myriad of goods.
 
 As I wandered through Istanbul, I was struck by the city's deep sense of history and culture. The majestic mosques and their minarets outline the skyline, standing as proud reminders of a rich, storied past. The air is scented with the aroma of strong Turkish coffee and sweet baklava, the latter of which I indulged in generously, savoring each flaky, honey-soaked bite.
@@ -315,7 +315,7 @@ Istanbul captivated me completely, its blend of ancient tradition and bustling m
     city: "Bangkok",
     date: "2023",
     country: "Thailand",
-    cover: "assets/img/travel/bangkok.jpg",
+    cover: "/abedi-research/assets/img/travel/bangkok.jpg",
     content: `My journey also took me to the vibrant streets of Bangkok, Thailand, where my friend Earth and his girlfriend, Aoy, hosted me with the utmost warmth and generosity. Bangkok, a city pulsating with life, dazzled me with its colorful markets, golden temples, and the ever-present aroma of delicious street food. From the spicy tang of pad thai to the sweet chill of mango sticky rice, every meal was a feast for the senses. Earth and Aoy, knowing my curiosity for local flavors, introduced me to the lesser-known culinary gems of the city, like the fiery boat noodles and the refreshing Thai iced tea, adding depth to my culinary adventure.
 
 Earth made sure I experienced the full spectrum of Thai hospitality and culture. We explored the sprawling cityscape, visiting iconic spots like the Grand Palace and the bustling night markets, where the air buzzed with the chatter of locals and tourists alike.
@@ -328,7 +328,7 @@ The kindness and friendliness of the Thai people were evident everywhere we went
     city: "Riyadh",
     date: "2022",
     country: "Saudi Arabia",
-    cover: "assets/img/travel/riyadh.jpg",
+    cover: "/abedi-research/assets/img/travel/riyadh.jpg",
     content: `My travels also led me to the dynamic city of Riyadh, a place where the vibrancy of modern life seamlessly blends with rich traditions. The city is alive at all hours, buzzing with the energy of bustling markets and illuminated streets. The local cuisine was a delightful exploration of flavors, each dish, from savory kabsa to sweet kunafa, was a new discovery.
 
 Reuniting with my old friend Tabish was one of the highlights of my visit. It had been years since we last met, and his hospitality was unparalleled. Tabish drove me around, showing me both the well-known and hidden gems of Riyadh. His insights enriched my understanding and appreciation of the city, making every site we visited more memorable.
@@ -341,14 +341,14 @@ Riyadh captivated me with its lively atmosphere, warm people, and the profound s
     city: "Prague",
     date: "2023",
     country: "Czechia",
-    cover: "assets/img/travel/prague.jpg",
+    cover: "/abedi-research/assets/img/travel/prague.jpg",
     content: `En route to Dresden, I had the fortune to spend a brief but memorable time in Prague. Even in my short stay, the city left a lasting impression with its stunning architecture and pristine streets. The weather was exceptionally kind, with clear skies and a gentle breeze that made walking through the historic city center a sheer delight. Prague's cleanliness was notable; every corner of the city shined, from the cobblestone squares to the grand facades of its buildings. Though my visit was fleeting, the beauty and order of Prague made it a place I hope to explore more thoroughly in the future.`
   },
   {
     city: "Dresden",
     date: "2023",
     country: "Germany",
-    cover: "assets/img/travel/dresden.jpg",
+    cover: "/abedi-research/assets/img/travel/dresden.jpg",
     content: `Dresden, a city steeped in history and architectural grandeur, hosted the conference I attended, and it quickly became one of my most memorable destinations. Beyond the enriching academic sessions, Dresden offered breathtaking landscapes that captivated my heart. The city's iconic castles, set against a backdrop of expansive rivers and distant seas, seemed like scenes from a fairy tale.
 
 I took advantage of the serene mornings in Dresden for my runs, each route unfolding like a panoramic postcard with historic bridges and tranquil waterways. The blend of natural beauty and urban elegance was mesmerizing, making every run an adventure in itself.
@@ -359,7 +359,7 @@ But it was the peacefulness and the majestic views that truly enchanted me. Stan
     city: "Oldenburg",
     date: "2023",
     country: "Germany",
-    cover: "assets/img/travel/oldenburg.jpg",
+    cover: "/abedi-research/assets/img/travel/oldenburg.jpg",
     content: `Leaving Dresden behind, I embarked on a train journey to Oldenburg to visit my uncle. The route to Oldenburg was unexpectedly breathtaking, a picturesque voyage through the heart of the countryside. As the train sliced through expansive fields and past quaint farmhouses, I was treated to views of lush agriculture and pastoral landscapes that seemed to stretch endlessly. It was a side of Germany often overshadowed by its urban counterparts, yet no less magnificent.
 
 Upon arriving in Oldenburg, I was greeted by the quiet charm of this small city. Its beauty lay in its simplicity and tranquility, narrow streets lined with traditional German architecture, small cafes filled with the aroma of fresh coffee and pastries, and the gentle buzz of daily life that moved at a relaxed, almost leisurely pace.
@@ -370,7 +370,7 @@ Oldenburg's serene environment provided a stark contrast to the bustling energy 
     city: "Kuala Lumpur",
     date: "2023 - Present",
     country: "Malaysia",
-    cover: "assets/img/travel/kuala-lumpur.jpg",
+    cover: "/abedi-research/assets/img/travel/kuala-lumpur.jpg",
     content: `Living in Singapore, I find myself frequently drawn to the vibrant city of Kuala Lumpur, a place that feels both excitingly urban and comfortably familiar. Each visit deepens my appreciation for its bustling streets, the friendly buzz of its residents, and the rich tapestry of cultures that make KL a dynamic metropolis.
 
 Over time, I've come to embrace the Malay language, picking up phrases and expressions that allow me to connect more deeply with the locals. This linguistic journey has opened doors to friendships and conversations that enrich each visit, making me feel more at home in the city's lively atmosphere.
@@ -385,15 +385,15 @@ Kuala Lumpur is more than just a frequent destination on my travel itinerary; it
 const travelGallery = [
   {
     caption: "Marina Bay, Singapore",
-    image: "assets/img/travel/marina-bay.jpg",
+    image: "/abedi-research/assets/img/travel/marina-bay.jpg",
   },
   {
     caption: "SUTD Research Hub, Singapore",
-    image: "assets/img/travel/sutd-team.jpg",
+    image: "/abedi-research/assets/img/travel/sutd-team.jpg",
   },
   {
     caption: "Melbourne, Australia",
-    image: "assets/img/travel/melbourne-conference.jpg",
+    image: "/abedi-research/assets/img/travel/melbourne-conference.jpg",
   },
 ];
 

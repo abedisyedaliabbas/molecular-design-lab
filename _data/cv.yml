@@ -1,0 +1,144 @@
+cv:
+  name: Syed Ali Abbas Abedi
+  email: "abedisyedaliabbas@gmail.com"
+  location: "Singapore"
+  phone: "+65 8923 4027"
+  url: "https://www.syedaliabbasabedi.com/"
+  
+  sections:
+    Experience:
+      - company: National University of Singapore (NUS), Singapore
+        position: Researcher
+        start_date: 2026-08
+        end_date: Present
+        summary: >
+          Working on AI and ML in NUS Materials Discovery AI Techniques using multi-fidelity machine learning.
+      - company: Nanyang Technological University (NTU), School of Chemistry, Chemical Engineering and Biotechnology, Singapore
+        position: Research Fellow
+        start_date: 2026-01
+        end_date: 2026-08
+        summary: >
+          • Developed a hybrid quantum chemistry and ML workflow to screen 200+ molecular candidates for photostability and reactivity, ranking compounds by computed degradation susceptibility to prioritize experimental testing.
+          
+          • Built end-to-end Python pipelines that extract 40+ molecular descriptors from Gaussian output files, feed them into Scikit-learn regression models, and generate ranked candidate lists, cutting manual analysis time by 40%.
+          
+          • Investigated non-radiative decay pathways and spin-orbit coupling mechanisms to identify structural features that control molecular stability, directly informing experimental design decisions.
+          
+          • Collaborated with experimental teams across 4 countries, translating computational predictions into synthesis recommendations that contributed to 5 publications in 2025 and 2026.
+      - company: Singapore University of Technology and Design (SUTD), Singapore
+        position: Research Fellow (Postdoctoral)
+        start_date: 2024-09
+        end_date: 2026-01
+        summary: >
+          • Conducted computational studies to predict photothermal degradation pathways, correlating DFT-computed energy barriers with experimental failure modes across 50+ compounds with 85%+ agreement.
+          
+          • Benchmarked 12 DFT functionals and 8 basis sets with solvation models (PCM/CPCM) to establish an optimal accuracy-vs-cost protocol for reactivity assessments, reducing per-job compute time by 30%.
+          
+          • Automated parsing and statistical analysis of 10,000+ quantum chemistry log files using Bash/Python, enabling rapid identification of stability trends across heterogeneous datasets.
+          
+          • Published a first-author computational protocol in Nature Protocols for diagnosing photoinduced electron transfer mechanisms, providing a validated and reproducible workflow now adopted by external groups.
+      - company: University College London (UCL) & Queen Mary University of London, UK
+        position: Visiting Researcher
+        start_date: 2023-04
+        end_date: 2023-07
+        summary: >
+          • Collaborated with experimental scientists to validate multi-reference CASSCF models for reactive potential energy surfaces involving conical intersections, contributing to 2 joint publications.
+          
+          • Resolved persistent convergence issues in high-level excited-state calculations, enabling reliable mechanistic modelling of chemical degradation pathways.
+      - company: Singapore University of Technology and Design (SUTD), Singapore
+        position: Graduate Research Assistant
+        start_date: 2020-08
+        end_date: 2024-06
+        summary: >
+          • Developed and validated computational protocols for predicting molecular reactivity and conformational stability using DFT/TD-DFT, applied across 12 co-authored studies on structurally diverse compound families.
+          
+          • Built reusable Python toolkits for automated quantum chemistry job submission, output parsing, and property extraction on HPC clusters, adopted by 8 lab members.
+          
+          • Worked with heterogeneous experimental and computed datasets to establish structure-property relationships linking molecular design to functional outcomes.
+
+    Education:
+      - institution: Singapore University of Technology and Design, Singapore
+        studyType: PhD in Science, Mathematics & Technology
+        start_date: 2020
+        end_date: 2024
+        summary: >
+          Defence ("viva"): 04/06/2024 – Awarded: 30/06/2024.
+          
+          **Thesis:** "Computational Design and Mechanistic Investigation of Fluorophores Based on Excited-State Conformational Dynamics"
+      - institution: Lahore University of Management Sciences, Pakistan
+        studyType: MS in Mathematics
+        start_date: 2017
+        end_date: 2019
+        summary: >
+          Awarded: 30/06/2019.
+          
+          **Thesis:** "Predator-Prey Model with Age Structures"
+      - institution: University of Engineering & Technology, Lahore, Pakistan
+        studyType: BSc in Chemical Engineering and Technology
+        start_date: 2011
+        end_date: 2016
+        summary: >
+          Awarded: 31/01/2016
+
+    Skills:
+      - name: Computational Chemistry & Photophysics
+        keywords:
+          - Quantum Chemistry
+          - DFT, TD-DFT
+          - CASSCF/CASPT2
+          - Non-Adiabatic Dynamics
+          - MD Simulations
+          - Gaussian, ORCA, OpenMolcas, Avogadro, GAMESS
+      - name: Data Science & Machine Learning (AI-for-X)
+        keywords:
+          - Python (Pandas, NumPy, Matplotlib)
+          - Scikit-learn
+          - PyTorch
+          - Data Curation
+          - Feature Engineering
+          - Regression
+      - name: Programming & Data Processing
+        keywords:
+          - Python, Bash Scripting
+          - High-Performance Computing (HPC)
+          - PBS Workload Managers
+          - Git/GitHub
+      - name: Molecular Design & Modeling
+        keywords:
+          - Fluorophore Design
+          - Excited-State Dynamics
+          - Structure-Property Relationship Mapping
+          - TICT/PET/ESIPT Mechanism Elucidation
+
+    Awards:
+      - title: Awarded a £800 bursary
+        awarder: EPSRC Catalysis Hub and the RSC Summer School in Catalysis
+        date: 2024
+      - title: $250 APC Exhibitor Prize
+        awarder: 12th Asian Photochemistry Conference
+        date: 2023
+      - title: Emerging Area in Photochemistry research grant
+        awarder: 12th Asian Photochemistry Conference ($1,000 for innovative research)
+        date: 2023
+      - title: £500 RSC Travel Grant for Researchers
+        awarder: Royal Society of Chemistry
+        date: 2022
+      - title: Granted $900 funding
+        awarder: American Institute of Chemical Engineers (AIChE) for attending the Quantum Computing Workshop at Denmark Technical Institute (DTU)
+        date: 2022
+      - title: PhD SUTD Fellowship
+        awarder: Scholarship covering doctoral studies
+        date: 2020-2024
+
+    "Invited Presentations & Conferences":
+      - bullet: "Participated @ Global Young Scientists Summit in Singapore (2025)."
+      - bullet: "Invited speaker @ Interdisciplinary Medicine Young Scholars Forum on Biomedical Applications of Molecular Probes, Singapore (2024)."
+      - bullet: "Participated @ 12th Singapore International Chemistry Conference (2024)."
+      - bullet: "Poster @ Catalysis Fundamentals and Practice Summer School, Liverpool, UK (2024)."
+      - bullet: "Oral speaker @ The 5th International Conference on Fluorescent Biomolecules, Hong Kong (2024)."
+      - bullet: "Poster @ The 12th Asian Photochemistry Conference, Melbourne, Australia (2023)."
+      - bullet: "Poster @ 7th Green and Sustainable Chemistry Conference, Dresden, Germany (2023)."
+      - bullet: "Participated @ Global Young Scientists Summit in Singapore (2023)."
+      - bullet: "Poster @ 3rd Commonwealth Chemistry Posters Event, Online (2022)."
+      - bullet: "Oral speaker @ 7th International Symposium of Quantum Beam Science at Ibaraki University, Japan (2022)."
+      - bullet: "Oral speaker @ Quantum Computing Applications in Chemical and Biochemical Engineering Workshop, Copenhagen, Denmark (2022)."

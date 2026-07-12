@@ -1,0 +1,155 @@
+---
+layout: page
+title: Travel
+permalink: /travel/
+nav: true
+nav_order: 6
+---
+
+<!-- Custom CSS for Travel Blog -->
+<style>
+  .travel-stats-card {
+    background: var(--global-card-bg-color);
+    border: 1px solid var(--global-divider-color);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-around;
+  }
+  .travel-stat {
+    text-align: center;
+  }
+  .eyebrow {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: rgba(var(--global-theme-color-rgb), 0.1);
+    color: var(--global-theme-color);
+    border-radius: 50rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  .timeline-badge {
+    background: var(--global-theme-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 50rem;
+    display: inline-block;
+    font-weight: bold;
+  }
+  .travel-blog-post {
+    background: var(--global-card-bg-color);
+    border: 1px solid var(--global-divider-color);
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+  .travel-blog-post img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  .travel-blog-content {
+    padding: 1.5rem;
+  }
+</style>
+
+
+      <section class="page-hero">
+        <div class="container py-3">
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-7">
+              <span class="badge rounded-pill text-bg-primary text-uppercase"
+                >Travel Blog</span
+              >
+              <h1 class="display-5 fw-bold mt-2 mb-2">
+                Research journeys across the globe.
+              </h1>
+              <p class="lead text-muted mb-0">
+                Conferences, collaborations, and cities that shaped my research path.
+              </p>
+            </div>
+            <div class="col-lg-5">
+              <div class="travel-stats-card">
+                <div class="travel-stat">
+                  <p class="small text-uppercase text-muted mb-1">Cities</p>
+                  <h3 class="h2 fw-bold">80+</h3>
+                  <p class="text-muted mb-0">visited since 2023</p>
+                </div>
+                <div class="travel-stat">
+                  <p class="small text-uppercase text-muted mb-1">Talks</p>
+                  <h3 class="h2 fw-bold">10+</h3>
+                  <p class="text-muted mb-0">invited & contributed</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-5">
+        <div class="container">
+          <div class="section-heading text-center mb-5">
+            <span class="eyebrow">Recent entries</span>
+            <h2 class="fw-bold">Stories from the road</h2>
+          </div>
+          <div class="row g-4" id="travelPosts"></div>
+        </div>
+      </section>
+
+      <section class="py-5 bg-white">
+        <div class="container">
+          <div class="section-heading text-center mb-5">
+            <span class="eyebrow">Travel Stories</span>
+            <h2 class="fw-bold">Journeys and reflections</h2>
+            <p class="text-muted">
+              Detailed accounts of my travels across the globe, from conferences to personal adventures.
+            </p>
+          </div>
+          <div id="travelBlogPosts"></div>
+        </div>
+      </section>
+
+      <section class="py-5">
+        <div class="container">
+          <div class="section-heading text-center mb-5">
+            <span class="eyebrow">Highlights</span>
+            <h2 class="fw-bold">Featured destinations</h2>
+            <p class="text-muted">
+              Memorable cities and experiences from my research journey.
+            </p>
+          </div>
+          <div class="row g-4" id="featuredDestinations"></div>
+        </div>
+      </section>
+
+      <section class="py-5">
+        <div class="container">
+          <div class="section-heading text-center mb-5">
+            <span class="eyebrow">Postcards</span>
+            <h2 class="fw-bold">Snapshots & side quests</h2>
+            <p class="text-muted">
+              Photos from travels and conferences.
+            </p>
+          </div>
+          <div class="row g-4" id="travelGallery"></div>
+        </div>
+      </section>
+    
+<template id="travelTimelineTemplate">
+      <div class="timeline-item row g-4">
+        <div class="col-md-4">
+          <div class="timeline-badge">
+            <span class="year"></span>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="timeline-content shadow-sm p-4 rounded-4 bg-white">
+            <h3 class="h5 fw-bold title"></h3>
+            <p class="mb-1 text-primary-emphasis location"></p>
+            <p class="text-muted description"></p>
+          </div>
+        </div>
+      </div>
+    </template>
+
+<script src="{{ '/assets/js/travel.js' | relative_url }}"></script>
