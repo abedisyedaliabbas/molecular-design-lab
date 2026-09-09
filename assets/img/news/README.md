@@ -31,14 +31,15 @@
 **Note:** The Bursary Award article does not require a photo.
 
 ## Supported Formats
+
 - `.jpg` or `.jpeg` (recommended)
 - `.png`
 - `.webp`
 
 ## Tips
+
 - **PhD Graduation**: Large photo (400px height) at the top of the article
 - **Other articles**: Small portrait photos (150x200px) on the right side
 - **Bursary article**: No photo needed
 - Portrait photos should be vertical/portrait orientation for best results
 - Keep file sizes reasonable (under 2MB per image)
-

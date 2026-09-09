@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Molecular Design Lab</title>
+  <desc id="desc">A delta symbol with a copper correction line, representing delta learning and precise molecular design.</desc>
+  <path fill="#122a39" fill-rule="evenodd" d="M32 5 59 51H5L32 5Zm0 17L20 43h24L32 22Z" />
+  <path fill="#a64124" d="M5 56h54v4H5z" />
+</svg>
