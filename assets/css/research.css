@@ -58,6 +58,10 @@ select,
 summary {
   touch-action: manipulation;
 }
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 5px;
+}
 button {
   cursor: pointer;
 }
@@ -137,6 +141,17 @@ h2 {
   font-weight: 400;
   color: var(--muted);
   font-size: 0.8rem;
+}
+.monogram {
+  font-family: Georgia, serif;
+  font-size: 2.9rem;
+  font-weight: 400;
+  letter-spacing: -0.12em;
+  border-right: 1px solid var(--line);
+  padding-right: 22px;
+}
+.monogram span {
+  color: var(--accent);
 }
 .main-nav {
   margin-left: auto;
@@ -487,6 +502,20 @@ h2 {
 }
 .page-content {
   padding-bottom: 75px;
+}
+.prose {
+  max-width: 800px;
+}
+.prose h2 {
+  font-size: 2.5rem;
+  margin-top: 50px;
+}
+.prose h3 {
+  margin-top: 30px;
+}
+.prose p,
+.prose li {
+  color: var(--muted);
 }
 .research-detail {
   display: grid;
@@ -1148,6 +1177,9 @@ h2 {
     padding: 7px 9px;
     font: inherit;
     font-size: 0.75rem;
+  }
+  .main-nav[data-open="false"] {
+    display: none;
   }
   .main-nav {
     justify-content: flex-start;
