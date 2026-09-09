@@ -9,6 +9,7 @@
 ## Required Photo Files
 
 ### Travel Post Cover Images:
+
 - `phuket.jpg` - Phuket, Thailand
 - `amsterdam.jpg` - Amsterdam, Netherlands
 - `paris.jpg` - Paris, France
@@ -29,17 +30,19 @@
 - `kuala-lumpur.jpg` - Kuala Lumpur, Malaysia
 
 ### Gallery Photos:
+
 - `marina-bay.jpg` - Marina Bay, Singapore
 - `sutd-team.jpg` - SUTD Research Hub, Singapore
 - `melbourne-conference.jpg` - Melbourne, Australia
 
 ## Supported Formats
+
 - `.jpg` or `.jpeg` (recommended)
 - `.png`
 - `.webp`
 
 ## Tips
+
 - Keep file sizes reasonable (under 2MB per image for faster loading)
 - Use descriptive file names
 - Make sure photos match the correct locations!
-

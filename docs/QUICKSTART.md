@@ -89,16 +89,6 @@ Once your site is running, explore these customization options:
 - Frequently asked questions: [FAQ.md](FAQ.md)
 - Troubleshooting: [TROUBLESHOOTING.md](TROUBLESHOOTING.md)
 
-### Get Help from AI
-
-Use the **GitHub Copilot Customization Agent** (if you have Copilot) to:
-
-- Get step-by-step help with customizations
-- Understand how to modify specific features
-- Apply changes directly to your site
-
-See [CUSTOMIZE.md § GitHub Copilot Customization Agent](CUSTOMIZE.md#github-copilot-customization-agent) for details.
-
 ---
 
 **Common first steps:**

@@ -31,10 +31,10 @@ const cities = [
   { name: "Islamabad", country: "Pakistan", places: 3, timeAgo: "5 months ago", cover: "/abedi-research/assets/img/travel/islamabad.jpg" },
   { name: "Murree", country: "Pakistan", places: 1, timeAgo: "5 months ago", cover: "/abedi-research/assets/img/travel/murree.jpg" },
   { name: "Raiwind", country: "Pakistan", places: 1, timeAgo: "4 years ago", cover: "/abedi-research/assets/img/travel/riyadh.jpg" },
-  
+
   // Singapore
   { name: "Singapore", country: "Singapore", places: 449, timeAgo: "Last week", cover: "/abedi-research/assets/img/travel/marina-bay.jpg" },
-  
+
   // Malaysia
   { name: "Johor Bahru", country: "Malaysia", places: 64, timeAgo: "3 weeks ago", cover: "/abedi-research/assets/img/travel/kuala-lumpur.jpg" },
   { name: "Kuala Lumpur", country: "Malaysia", places: 5, timeAgo: "3 years ago", cover: "/abedi-research/assets/img/travel/kuala-lumpur.jpg" },
@@ -44,7 +44,7 @@ const cities = [
   { name: "Batu Caves", country: "Malaysia", places: 1, timeAgo: "3 years ago", cover: "/abedi-research/assets/img/travel/kuala-lumpur.jpg" },
   { name: "Gelang Patah", country: "Malaysia", places: 4, timeAgo: "10 months ago", cover: "/abedi-research/assets/img/travel/kuala-lumpur.jpg" },
   { name: "San Donato Milanese", country: "Malaysia", places: 13, timeAgo: "11 months ago", cover: "/abedi-research/assets/img/travel/milan.jpg" },
-  
+
   // Thailand
   { name: "Bangkok", country: "Thailand", places: 26, timeAgo: "7 months ago", cover: "/abedi-research/assets/img/travel/bangkok.jpg" },
   { name: "Phuket", country: "Thailand", places: 4, timeAgo: "8 months ago", cover: "/abedi-research/assets/img/travel/phuket.jpg" },
@@ -57,9 +57,15 @@ const cities = [
   { name: "Kathu", country: "Thailand", places: 1, timeAgo: "8 months ago", cover: "/abedi-research/assets/img/travel/phuket.jpg" },
   { name: "Pa Tong", country: "Thailand", places: 4, timeAgo: "8 months ago", cover: "/abedi-research/assets/img/travel/phuket.jpg" },
   { name: "Rawai", country: "Thailand", places: 1, timeAgo: "8 months ago", cover: "/abedi-research/assets/img/travel/phuket.jpg" },
-  { name: "Phra Nakhon Si Ayutthaya", country: "Thailand", places: 2, timeAgo: "8 months ago", cover: "/abedi-research/assets/img/travel/bangkok.jpg" },
+  {
+    name: "Phra Nakhon Si Ayutthaya",
+    country: "Thailand",
+    places: 2,
+    timeAgo: "8 months ago",
+    cover: "/abedi-research/assets/img/travel/bangkok.jpg",
+  },
   { name: "Khlong Chik", country: "Thailand", places: 1, timeAgo: "8 months ago", cover: "/abedi-research/assets/img/travel/bangkok.jpg" },
-  
+
   // Italy
   { name: "Torino", country: "Italy", places: 8, timeAgo: "2 weeks ago", cover: "/abedi-research/assets/img/travel/Torino.jpg" },
   { name: "Milan", country: "Italy", places: 13, timeAgo: "11 months ago", cover: "/abedi-research/assets/img/travel/milan.jpg" },
@@ -71,33 +77,39 @@ const cities = [
   { name: "Brunate", country: "Italy", places: 1, timeAgo: "2 years ago", cover: "/abedi-research/assets/img/travel/milan.jpg" },
   { name: "Brescia", country: "Italy", places: 1, timeAgo: "11 months ago", cover: "/abedi-research/assets/img/travel/milan.jpg" },
   { name: "San Giuliano Milanese", country: "Italy", places: 5, timeAgo: "11 months ago", cover: "/abedi-research/assets/img/travel/milan.jpg" },
-  
+
   // Netherlands
   { name: "Amsterdam", country: "Netherlands", places: 9, timeAgo: "11 months ago", cover: "/abedi-research/assets/img/travel/amsterdam.jpg" },
   { name: "Schiphol", country: "Netherlands", places: 2, timeAgo: "11 months ago", cover: "/abedi-research/assets/img/travel/amsterdam.jpg" },
-  
+
   // France
   { name: "Paris", country: "France", places: 11, timeAgo: "11 months ago", cover: "/abedi-research/assets/img/travel/paris.jpg" },
   { name: "Montrouge", country: "France", places: 1, timeAgo: "11 months ago", cover: "/abedi-research/assets/img/travel/paris.jpg" },
   { name: "Malakoff", country: "France", places: 2, timeAgo: "11 months ago", cover: "/abedi-research/assets/img/travel/paris.jpg" },
-  
+
   // United Kingdom
   { name: "London", country: "United Kingdom", places: 47, timeAgo: "Last year", cover: "/abedi-research/assets/img/travel/london.jpg" },
   { name: "Liverpool", country: "United Kingdom", places: 8, timeAgo: "Last year", cover: "/abedi-research/assets/img/travel/liverpool.jpg" },
   { name: "Reading", country: "United Kingdom", places: 9, timeAgo: "Last year", cover: "/abedi-research/assets/img/travel/london.jpg" },
   { name: "Barking", country: "United Kingdom", places: 2, timeAgo: "Last year", cover: "/abedi-research/assets/img/travel/london.jpg" },
-  { name: "Leicester Forest East", country: "United Kingdom", places: 1, timeAgo: "Last year", cover: "/abedi-research/assets/img/travel/london.jpg" },
+  {
+    name: "Leicester Forest East",
+    country: "United Kingdom",
+    places: 1,
+    timeAgo: "Last year",
+    cover: "/abedi-research/assets/img/travel/london.jpg",
+  },
   { name: "Wembley", country: "United Kingdom", places: 23, timeAgo: "2 years ago", cover: "/abedi-research/assets/img/travel/london.jpg" },
   { name: "Horley", country: "United Kingdom", places: 3, timeAgo: "2 years ago", cover: "/abedi-research/assets/img/travel/london.jpg" },
   { name: "Wythall", country: "United Kingdom", places: 1, timeAgo: "Last year", cover: "/abedi-research/assets/img/travel/london.jpg" },
   { name: "Southall", country: "United Kingdom", places: 2, timeAgo: "Last year", cover: "/abedi-research/assets/img/travel/london.jpg" },
   { name: "Masai", country: "United Kingdom", places: 1, timeAgo: "Last year", cover: "/abedi-research/assets/img/travel/london.jpg" },
-  
+
   // United Arab Emirates
   { name: "Dubai", country: "United Arab Emirates", places: 11, timeAgo: "Last year", cover: "/abedi-research/assets/img/travel/dubai.jpg" },
   { name: "Sharjah", country: "United Arab Emirates", places: 1, timeAgo: "Last year", cover: "/abedi-research/assets/img/travel/dubai.jpg" },
   { name: "Ajman", country: "United Arab Emirates", places: 6, timeAgo: "Last year", cover: "/abedi-research/assets/img/travel/dubai.jpg" },
-  
+
   // Saudi Arabia
   { name: "Riyadh", country: "Saudi Arabia", places: 8, timeAgo: "2 years ago", cover: "/abedi-research/assets/img/travel/riyadh.jpg" },
   { name: "Makkah", country: "Saudi Arabia", places: 5, timeAgo: "2 years ago", cover: "/abedi-research/assets/img/travel/riyadh.jpg" },
@@ -105,19 +117,19 @@ const cities = [
   { name: "Al Abyar", country: "Saudi Arabia", places: 1, timeAgo: "2 years ago", cover: "/abedi-research/assets/img/travel/riyadh.jpg" },
   { name: "Al Bukayriyah", country: "Saudi Arabia", places: 1, timeAgo: "2 years ago", cover: "/abedi-research/assets/img/travel/riyadh.jpg" },
   { name: "Taif", country: "Saudi Arabia", places: 1, timeAgo: "2 years ago", cover: "/abedi-research/assets/img/travel/riyadh.jpg" },
-  
+
   // Australia
   { name: "Melbourne", country: "Australia", places: 18, timeAgo: "2 years ago", cover: "/abedi-research/assets/img/travel/melbourne.jpg" },
-  
+
   // Türkiye
   { name: "Istanbul", country: "Türkiye", places: 2, timeAgo: "2 years ago", cover: "/abedi-research/assets/img/travel/istanbul.jpg" },
-  
+
   // Qatar
   { name: "Doha", country: "Qatar", places: 1, timeAgo: "2 years ago", cover: "/abedi-research/assets/img/travel/dubai.jpg" },
-  
+
   // Iraq
   { name: "Baghdad", country: "Iraq", places: 1, timeAgo: "2 years ago", cover: "/abedi-research/assets/img/travel/riyadh.jpg" },
-  
+
   // Germany
   { name: "Dresden", country: "Germany", places: 5, timeAgo: "3 years ago", cover: "/abedi-research/assets/img/travel/dresden.jpg" },
   { name: "Oldenburg", country: "Germany", places: 5, timeAgo: "2 years ago", cover: "/abedi-research/assets/img/travel/oldenburg.jpg" },
@@ -128,10 +140,10 @@ const cities = [
   { name: "Halle (Saale)", country: "Germany", places: 1, timeAgo: "3 years ago", cover: "/abedi-research/assets/img/travel/dresden.jpg" },
   { name: "Leipzig", country: "Germany", places: 1, timeAgo: "3 years ago", cover: "/abedi-research/assets/img/travel/dresden.jpg" },
   { name: "Sepang", country: "Germany", places: 2, timeAgo: "2 years ago", cover: "/abedi-research/assets/img/travel/dresden.jpg" },
-  
+
   // Czechia
   { name: "Prague", country: "Czechia", places: 1, timeAgo: "3 years ago", cover: "/abedi-research/assets/img/travel/prague.jpg" },
-  
+
   // Denmark
   { name: "Copenhagen", country: "Denmark", places: 4, timeAgo: "4 years ago", cover: "/abedi-research/assets/img/travel/copenhagen.jpg" },
   { name: "Kastrup", country: "Denmark", places: 1, timeAgo: "4 years ago", cover: "/abedi-research/assets/img/travel/copenhagen.jpg" },
@@ -140,10 +152,10 @@ const cities = [
   { name: "Brøndby Strand", country: "Denmark", places: 2, timeAgo: "4 years ago", cover: "/abedi-research/assets/img/travel/copenhagen.jpg" },
   { name: "Glostrup", country: "Denmark", places: 2, timeAgo: "4 years ago", cover: "/abedi-research/assets/img/travel/copenhagen.jpg" },
   { name: "Gentofte", country: "Denmark", places: 1, timeAgo: "4 years ago", cover: "/abedi-research/assets/img/travel/copenhagen.jpg" },
-  
+
   // Hong Kong
   { name: "Hong Kong", country: "Hong Kong", places: 8, timeAgo: "2 years ago", cover: "/abedi-research/assets/img/travel/hong-kong.jpg" },
-  
+
   // Bahrain
   { name: "Manama", country: "Bahrain", places: 1, timeAgo: "11 months ago", cover: "/abedi-research/assets/img/travel/dubai.jpg" },
 ];
@@ -172,7 +184,7 @@ We rented a motorbike for the day, a decision that added an element of thrill an
 
 Phuket's safety and warmth stood out. At every turn, the locals were welcoming, the streets felt secure, and the overall atmosphere was calm yet vibrant. There's something truly comforting about an island that feels as alive at sunrise as it does at nightfall.
 
-And then there's the food, Thai cuisine in its home context is nothing short of extraordinary. Whether it was a spicy green curry by the beach, a roadside pad kra pao bursting with flavor, or the refreshing sweetness of mango sticky rice, each meal was a celebration of freshness and bold taste. But it wasn't just the dishes that made it memorable, it was the 7-Eleven culture that quietly stole my heart. The sheer variety of snacks, hot meals, and iced drinks available at any hour was both delightfully quirky and unexpectedly comforting.`
+And then there's the food, Thai cuisine in its home context is nothing short of extraordinary. Whether it was a spicy green curry by the beach, a roadside pad kra pao bursting with flavor, or the refreshing sweetness of mango sticky rice, each meal was a celebration of freshness and bold taste. But it wasn't just the dishes that made it memorable, it was the 7-Eleven culture that quietly stole my heart. The sheer variety of snacks, hot meals, and iced drinks available at any hour was both delightfully quirky and unexpectedly comforting.`,
   },
   {
     city: "Amsterdam",
@@ -183,7 +195,7 @@ And then there's the food, Thai cuisine in its home context is nothing short of 
 
 Navigating through the city, the historic canals served as my guide, leading me through neighborhoods filled with narrow, gabled houses that speak of a rich maritime history. The tranquility of the waterways contrasted sharply with the vibrant life on the streets, where cyclists whizzed by, adding to the dynamic energy of the city.
 
-A visit to the Van Gogh Museum was a highlight, where I immersed myself in the strokes of genius that color every canvas. The museum offered not just art, but stories of passion, despair, and unyielding creativity that define Van Gogh's legacy. Just as impactful was the Anne Frank House, a poignant journey through hidden rooms and silent histories that still echo with the strength and resilience of its diarist.`
+A visit to the Van Gogh Museum was a highlight, where I immersed myself in the strokes of genius that color every canvas. The museum offered not just art, but stories of passion, despair, and unyielding creativity that define Van Gogh's legacy. Just as impactful was the Anne Frank House, a poignant journey through hidden rooms and silent histories that still echo with the strength and resilience of its diarist.`,
   },
   {
     city: "Paris",
@@ -196,7 +208,7 @@ During my stay, I wandered through the cobbled lanes of Montmartre, indulged in 
 
 But the adventure didn't end in Paris. From there, I traveled to Amsterdam, where the canals and vibrant art scene provided a perfect continuation of my European escapade. The journey concluded in Milan, reuniting with my family for a festive celebration amidst the city's renowned fashion and culinary delights.
 
-Returning to Singapore, I carried with me not just souvenirs, but a treasure trove of memories and experiences from across Europe, each city adding its unique brushstroke to the canvas of my travels.`
+Returning to Singapore, I carried with me not just souvenirs, but a treasure trove of memories and experiences from across Europe, each city adding its unique brushstroke to the canvas of my travels.`,
   },
   {
     city: "Liverpool",
@@ -207,7 +219,7 @@ Returning to Singapore, I carried with me not just souvenirs, but a treasure tro
 
 Our time in Liverpool coincided with a conference, blending professional engagements with leisure exploration. Amidst the academic discussions, we seized every opportunity to soak in the local culture and iconic landmarks. One of the highlights was our visit to The Beatles Statue on the waterfront, a symbolic spot that offers a panoramic view of the Mersey.
 
-But Liverpool offered more than just musical nostalgia. The city's architecture, from the historical docks to the modern museums, told stories of a resilient community that has evolved through time. Our journey didn't stop there; driven by the spirit of adventure, we ventured further to Sheffield, exploring its surrounding mountains and natural beauty. This leg of the trip was a blend of urban exploration and serene landscapes, showcasing the diverse allure of Northern England.`
+But Liverpool offered more than just musical nostalgia. The city's architecture, from the historical docks to the modern museums, told stories of a resilient community that has evolved through time. Our journey didn't stop there; driven by the spirit of adventure, we ventured further to Sheffield, exploring its surrounding mountains and natural beauty. This leg of the trip was a blend of urban exploration and serene landscapes, showcasing the diverse allure of Northern England.`,
   },
   {
     city: "Hong Kong",
@@ -218,7 +230,7 @@ But Liverpool offered more than just musical nostalgia. The city's architecture,
 
 As I wandered through the bustling districts, the cool breeze carried with it the rich, earthy scent of rain-soaked concrete, a stark contrast to the day's earlier humidity. Around me, the city hadn't missed a beat; people with umbrellas in one hand and smartphones in the other darted in and out of the neon-lit shops and eateries, their conversations a melodious blend of Cantonese and snippets of other world languages. Each street corner was a blend of the traditional and the ultra-modern, from fragrant street food stalls offering warm, inviting dim sum, to towering digital billboards advertising the latest tech.
 
-This night walk wasn't just a simple stroll; it was a dive into the heart of Hong Kong's living, breathing urban culture. The cold breeze didn't just touch my skin; it seemed to seep into my senses, invigorating and inviting me to delve deeper into the night, to discover more hidden alleyways and the stories they held. Every step was a narrative unfolding, every sight and sound a testament to the city's dynamic pulse.`
+This night walk wasn't just a simple stroll; it was a dive into the heart of Hong Kong's living, breathing urban culture. The cold breeze didn't just touch my skin; it seemed to seep into my senses, invigorating and inviting me to delve deeper into the night, to discover more hidden alleyways and the stories they held. Every step was a narrative unfolding, every sight and sound a testament to the city's dynamic pulse.`,
   },
   {
     city: "Melbourne",
@@ -231,7 +243,7 @@ Each morning, as the first light painted the sky in hues of soft pinks and deep 
 
 These runs were more than just physical exercise; they were a meditation, a time to reflect. As I moved along the winding paths, with the Yarra's waters softly lapping at its banks and the vast ocean in sight, I found myself contemplating the journey of life, the ups and downs, the twists and turns. Like the river, we are all headed somewhere vast and unknown, and every step along this path, every person we meet, enriches our journey, adding layers of memories and lessons.
 
-Melbourne's serene mornings offered a stark contrast to the nocturnal energy of Hong Kong, yet both experiences were deeply enriching, each a different chapter in the story of my travels, teaching me more about the world and myself.`
+Melbourne's serene mornings offered a stark contrast to the nocturnal energy of Hong Kong, yet both experiences were deeply enriching, each a different chapter in the story of my travels, teaching me more about the world and myself.`,
   },
   {
     city: "London",
@@ -250,7 +262,7 @@ Londoners, I found, were particularly spirited on game days. Whenever there was 
 
 Living with my childhood friends in London was a once-in-a-lifetime experience that turned the city into a home away from home. Together, we explored the bustling streets, shared countless meals, and relived old memories, making every moment uniquely special and deeply cherished.
 
-The few months I spent in London were transformative, adding layers of cultural appreciation and professional growth to my life's tapestry. The city taught me the value of resilience and adaptability, qualities mirrored in its people and its ever-evolving landscape.`
+The few months I spent in London were transformative, adding layers of cultural appreciation and professional growth to my life's tapestry. The city taught me the value of resilience and adaptability, qualities mirrored in its people and its ever-evolving landscape.`,
   },
   {
     city: "Milan",
@@ -261,7 +273,7 @@ The few months I spent in London were transformative, adding layers of cultural 
 
 Milan's culinary scene was a particular delight. From creamy risottos to perfectly al dente pasta and the crisp crusts of wood-fired pizzas, each meal was a celebration of flavors. The local gelato shops, with their myriad of rich flavors, became a daily treat, as irresistible as the city's renowned fashion boutiques.
 
-Exploring Milan with family by my side offered a unique perspective on the city's charms and idiosyncrasies. Whether marveling at the grandeur of the Duomo, strolling through the artistically rich Brera district, or enjoying the tranquility of Sempione Park, every experience was enhanced by the warmth of the sun and the people I love. Milan was not just a stop on my travel itinerary; it was a vibrant tableau of joy, family, and culinary adventure.`
+Exploring Milan with family by my side offered a unique perspective on the city's charms and idiosyncrasies. Whether marveling at the grandeur of the Duomo, strolling through the artistically rich Brera district, or enjoying the tranquility of Sempione Park, every experience was enhanced by the warmth of the sun and the people I love. Milan was not just a stop on my travel itinerary; it was a vibrant tableau of joy, family, and culinary adventure.`,
   },
   {
     city: "Venice",
@@ -272,7 +284,7 @@ Exploring Milan with family by my side offered a unique perspective on the city'
 
 Navigating Venice was an adventure in itself. I chose to cycle along its narrow paths, an exhilarating way to explore the city's hidden gems and iconic landmarks. The absence of cars, replaced by the gentle lapping of canal waters, made cycling both peaceful and intimate.
 
-A highlight of my time in Venice was indulging in the local cuisine, particularly the dark chocolate Italian gelato. Each scoop was a decadent treat, rich and bursting with flavor, perfect after long rides or leisurely gondola tours. Venice wasn't just a city to visit; it was a city to experience, by bike, by boat, and by the taste of its unforgettable desserts.`
+A highlight of my time in Venice was indulging in the local cuisine, particularly the dark chocolate Italian gelato. Each scoop was a decadent treat, rich and bursting with flavor, perfect after long rides or leisurely gondola tours. Venice wasn't just a city to visit; it was a city to experience, by bike, by boat, and by the taste of its unforgettable desserts.`,
   },
   {
     city: "Copenhagen",
@@ -285,7 +297,7 @@ Copenhagen's beauty was matched by the friendliness of its people. The Danes, wi
 
 Exploring Copenhagen, I was struck by the seamless blend of historical charm and modern innovation. From the iconic silhouette of Nyhavn's colorful facades to the cutting-edge design of the Black Diamond Library, each site spoke of a community that cherishes its past while enthusiastically embracing the future.
 
-The Scandinavian feel of the city, its clean streets, its casual yet fashionable crowd, and its commitment to sustainability, made every moment refreshing. Whether I was enjoying a cozy moment in a local café or cycling along the waterfront, Copenhagen offered a tranquil yet vibrant atmosphere that was truly unique.`
+The Scandinavian feel of the city, its clean streets, its casual yet fashionable crowd, and its commitment to sustainability, made every moment refreshing. Whether I was enjoying a cozy moment in a local café or cycling along the waterfront, Copenhagen offered a tranquil yet vibrant atmosphere that was truly unique.`,
   },
   {
     city: "Dubai",
@@ -296,7 +308,7 @@ The Scandinavian feel of the city, its clean streets, its casual yet fashionable
 
 The city's transformation from arid sands to a vibrant oasis is nothing short of mesmerizing. In Dubai, every street corner tells the story of ambition and innovation, from the towering Burj Khalifa to the sprawling malls that are a shopper's paradise. Yet, it's the diversity of its people that truly defines Dubai. Here, cultures from every corner of the globe converge, creating a melting pot of traditions, cuisines, and languages.
 
-Spending time with my sister and niece in this futuristic landscape brought a comforting sense of family to the grandeur around us. Together, we explored the city, from its lush gardens to its artificial islands, marveling at how Dubai has sculpted itself into a global hub. It was a wonderful blend of family warmth amid the backdrop of Dubai's relentless ambition.`
+Spending time with my sister and niece in this futuristic landscape brought a comforting sense of family to the grandeur around us. Together, we explored the city, from its lush gardens to its artificial islands, marveling at how Dubai has sculpted itself into a global hub. It was a wonderful blend of family warmth amid the backdrop of Dubai's relentless ambition.`,
   },
   {
     city: "Istanbul",
@@ -309,7 +321,7 @@ As I wandered through Istanbul, I was struck by the city's deep sense of history
 
 Exploring the vast arrays of shops in the Grand Bazaar, I was enchanted by the vibrant tapestries, delicate ceramics, and the sparkling allure of Turkish lamps, each piece telling a story of craftsmanship passed down through generations. The call to prayer echoed through the streets, adding to the mesmerizing atmosphere of this historic metropolis.
 
-Istanbul captivated me completely, its blend of ancient tradition and bustling modern life created a tapestry as rich and colorful as the goods in its markets. Every day spent in this city was a deep dive into a living history, a vibrant culture, and a culinary adventure I will never forget.`
+Istanbul captivated me completely, its blend of ancient tradition and bustling modern life created a tapestry as rich and colorful as the goods in its markets. Every day spent in this city was a deep dive into a living history, a vibrant culture, and a culinary adventure I will never forget.`,
   },
   {
     city: "Bangkok",
@@ -322,7 +334,7 @@ Earth made sure I experienced the full spectrum of Thai hospitality and culture.
 
 Our adventures extended to Pattaya, a coastal town known for its stunning beaches and vibrant nightlife. The transition from Bangkok's frenetic energy to Pattaya's laid-back beach vibe was refreshing. Here, we soaked up the sun, enjoyed the waves, and continued our culinary journey, sampling fresh seafood and local delicacies.
 
-The kindness and friendliness of the Thai people were evident everywhere we went, making my visit not just memorable but truly heartwarming. Thailand left a lasting impression on me, combining rich cultural experiences with the genuine warmth of its people, and it's a place I eagerly look forward to revisiting.`
+The kindness and friendliness of the Thai people were evident everywhere we went, making my visit not just memorable but truly heartwarming. Thailand left a lasting impression on me, combining rich cultural experiences with the genuine warmth of its people, and it's a place I eagerly look forward to revisiting.`,
   },
   {
     city: "Riyadh",
@@ -335,14 +347,14 @@ Reuniting with my old friend Tabish was one of the highlights of my visit. It ha
 
 Among the profound experiences in Riyadh was performing Umrah. This spiritual journey, a moment of deep reflection and connection, was heightened by the surrounding ambiance of devotion and peace. The experience of walking in the steps of millions before me, at the Grand Mosque, added a profound layer of significance to my visit.
 
-Riyadh captivated me with its lively atmosphere, warm people, and the profound spiritual experience. My time there, spent reconnecting with a dear friend and immersing myself in the local culture and spiritual practices, was not just memorable, it was deeply enriching.`
+Riyadh captivated me with its lively atmosphere, warm people, and the profound spiritual experience. My time there, spent reconnecting with a dear friend and immersing myself in the local culture and spiritual practices, was not just memorable, it was deeply enriching.`,
   },
   {
     city: "Prague",
     date: "2023",
     country: "Czechia",
     cover: "/abedi-research/assets/img/travel/prague.jpg",
-    content: `En route to Dresden, I had the fortune to spend a brief but memorable time in Prague. Even in my short stay, the city left a lasting impression with its stunning architecture and pristine streets. The weather was exceptionally kind, with clear skies and a gentle breeze that made walking through the historic city center a sheer delight. Prague's cleanliness was notable; every corner of the city shined, from the cobblestone squares to the grand facades of its buildings. Though my visit was fleeting, the beauty and order of Prague made it a place I hope to explore more thoroughly in the future.`
+    content: `En route to Dresden, I had the fortune to spend a brief but memorable time in Prague. Even in my short stay, the city left a lasting impression with its stunning architecture and pristine streets. The weather was exceptionally kind, with clear skies and a gentle breeze that made walking through the historic city center a sheer delight. Prague's cleanliness was notable; every corner of the city shined, from the cobblestone squares to the grand facades of its buildings. Though my visit was fleeting, the beauty and order of Prague made it a place I hope to explore more thoroughly in the future.`,
   },
   {
     city: "Dresden",
@@ -353,7 +365,7 @@ Riyadh captivated me with its lively atmosphere, warm people, and the profound s
 
 I took advantage of the serene mornings in Dresden for my runs, each route unfolding like a panoramic postcard with historic bridges and tranquil waterways. The blend of natural beauty and urban elegance was mesmerizing, making every run an adventure in itself.
 
-But it was the peacefulness and the majestic views that truly enchanted me. Standing by the banks of the Elbe, looking out over the water with the city's baroque skyline reflecting softly, I found myself wishing I could stay longer. Dresden not only impressed me with its beauty but also left a profound impression on my soul, making the thought of leaving almost unbearable.`
+But it was the peacefulness and the majestic views that truly enchanted me. Standing by the banks of the Elbe, looking out over the water with the city's baroque skyline reflecting softly, I found myself wishing I could stay longer. Dresden not only impressed me with its beauty but also left a profound impression on my soul, making the thought of leaving almost unbearable.`,
   },
   {
     city: "Oldenburg",
@@ -364,7 +376,7 @@ But it was the peacefulness and the majestic views that truly enchanted me. Stan
 
 Upon arriving in Oldenburg, I was greeted by the quiet charm of this small city. Its beauty lay in its simplicity and tranquility, narrow streets lined with traditional German architecture, small cafes filled with the aroma of fresh coffee and pastries, and the gentle buzz of daily life that moved at a relaxed, almost leisurely pace.
 
-Oldenburg's serene environment provided a stark contrast to the bustling energy of the larger cities I'd visited. Here, in the calm of this lovely town, I found a perfect space for reflection and connection with family, making my stay not just a visit, but a cherished memory.`
+Oldenburg's serene environment provided a stark contrast to the bustling energy of the larger cities I'd visited. Here, in the calm of this lovely town, I found a perfect space for reflection and connection with family, making my stay not just a visit, but a cherished memory.`,
   },
   {
     city: "Kuala Lumpur",
@@ -377,8 +389,8 @@ Over time, I've come to embrace the Malay language, picking up phrases and expre
 
 But it's the food of Kuala Lumpur that truly captures my heart. The array of flavors found in dishes like nasi lemak, satay, and roti canai is immensely satisfying. I've incorporated these meals into my daily routine, each bite a reminder of KL's diverse culinary landscape. Whether dining at a street-side stall or a bustling night market, the food here is not just nourishment; it's a vibrant part of the city's soul.
 
-Kuala Lumpur is more than just a frequent destination on my travel itinerary; it's a place that resonates with my spirit, offering new experiences and joys with every visit.`
-  }
+Kuala Lumpur is more than just a frequent destination on my travel itinerary; it's a place that resonates with my spirit, offering new experiences and joys with every visit.`,
+  },
 ];
 
 // Gallery photos
@@ -411,7 +423,7 @@ function renderCountries() {
           <div class="country-info">
             <h3 class="h5 fw-bold mb-1">${country.name}</h3>
             <p class="text-muted small mb-0">
-              <span class="badge bg-primary-subtle text-primary">${country.cities} ${country.cities === 1 ? 'city' : 'cities'}</span>
+              <span class="badge bg-primary-subtle text-primary">${country.cities} ${country.cities === 1 ? "city" : "cities"}</span>
             </p>
           </div>
         </div>
@@ -433,13 +445,14 @@ function renderCities() {
       (city) => `
       <div class="col-md-6 col-lg-3">
         <article class="city-card h-100">
-          ${city.cover 
-            ? `<div class="city-cover" style="background-image:url('${city.cover}');"></div>`
-            : `<div class="city-cover d-flex align-items-center justify-content-center bg-light">
+          ${
+            city.cover
+              ? `<div class="city-cover" style="background-image:url('${city.cover}');"></div>`
+              : `<div class="city-cover d-flex align-items-center justify-content-center bg-light">
                 <i class="fa-solid fa-city fa-3x text-muted"></i>
               </div>`
           }
-          <div class="city-badge">${city.places} ${city.places === 1 ? 'place' : 'places'}</div>
+          <div class="city-badge">${city.places} ${city.places === 1 ? "place" : "places"}</div>
           <div class="city-body">
             <h3 class="h6 fw-bold mb-1">${city.name}</h3>
             <p class="text-muted small mb-0">${city.country}</p>
@@ -456,18 +469,17 @@ function renderTravelPosts() {
   if (!container) return;
 
   // Get top cities by places
-  const topCities = [...cities]
-    .sort((a, b) => b.places - a.places)
-    .slice(0, 12);
+  const topCities = [...cities].sort((a, b) => b.places - a.places).slice(0, 12);
 
   container.innerHTML = topCities
     .map(
       (city) => `
       <div class="col-md-6 col-lg-3">
         <article class="post-card h-100">
-          ${city.cover 
-            ? `<div class="post-cover" style="background-image:url('${city.cover}');"></div>`
-            : `<div class="post-cover d-flex align-items-center justify-content-center bg-light">
+          ${
+            city.cover
+              ? `<div class="post-cover" style="background-image:url('${city.cover}');"></div>`
+              : `<div class="post-cover d-flex align-items-center justify-content-center bg-light">
                 <i class="fa-solid fa-image fa-3x text-muted"></i>
               </div>`
           }
@@ -496,7 +508,7 @@ function renderFeaturedDestinations() {
       description: "449 places visited - Home base for PhD and postdoctoral research.",
       icon: "fa-building",
       color: "primary",
-      places: 449
+      places: 449,
     },
     {
       title: "Lahore",
@@ -504,7 +516,7 @@ function renderFeaturedDestinations() {
       description: "265 places visited - My hometown and frequent destination.",
       icon: "fa-home",
       color: "success",
-      places: 265
+      places: 265,
     },
     {
       title: "London",
@@ -512,7 +524,7 @@ function renderFeaturedDestinations() {
       description: "47 places visited - Visiting researcher at UCL and Queen Mary.",
       icon: "fa-handshake",
       color: "info",
-      places: 47
+      places: 47,
     },
     {
       title: "Melbourne",
@@ -520,8 +532,8 @@ function renderFeaturedDestinations() {
       description: "18 places visited - APC Exhibitor Prize winner.",
       icon: "fa-trophy",
       color: "warning",
-      places: 18
-    }
+      places: 18,
+    },
   ];
 
   container.innerHTML = featured
@@ -561,14 +573,18 @@ function renderTravelBlogPosts() {
       (post) => `
       <article class="travel-blog-post mb-5">
         <div class="row g-4">
-          ${post.cover ? `
+          ${
+            post.cover
+              ? `
           <div class="col-md-4">
             <div class="blog-post-cover">
               <img src="${post.cover}" alt="${post.city}" class="img-fluid rounded-4 w-100" style="height: 300px; object-fit: cover;" loading="lazy" />
             </div>
           </div>
-          ` : ''}
-          <div class="${post.cover ? 'col-md-8' : 'col-12'}">
+          `
+              : ""
+          }
+          <div class="${post.cover ? "col-md-8" : "col-12"}">
             <div class="d-flex align-items-start gap-3 mb-3">
               <div>
                 <h2 class="h3 fw-bold mb-2">${post.city}</h2>
@@ -579,7 +595,10 @@ function renderTravelBlogPosts() {
               </div>
             </div>
             <div class="travel-blog-content">
-              ${post.content.split('\n\n').map(para => `<p class="text-muted mb-3">${para}</p>`).join('')}
+              ${post.content
+                .split("\n\n")
+                .map((para) => `<p class="text-muted mb-3">${para}</p>`)
+                .join("")}
             </div>
           </div>
         </div>
@@ -593,8 +612,8 @@ function renderTravelGallery() {
   const container = document.getElementById("travelGallery");
   if (!container) return;
 
-  const filteredGallery = travelGallery.filter(shot => shot.image && shot.image.trim() !== "");
-  
+  const filteredGallery = travelGallery.filter((shot) => shot.image && shot.image.trim() !== "");
+
   if (filteredGallery.length === 0) {
     container.innerHTML = `
       <div class="col-12 text-center py-5">
@@ -623,7 +642,7 @@ document.addEventListener("DOMContentLoaded", () => {
   renderFeaturedDestinations();
   renderTravelGallery();
   renderTravelBlogPosts();
-  
+
   // Render countries and cities if containers exist
   if (document.getElementById("countriesView")) {
     renderCountries();
