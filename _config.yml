@@ -4,7 +4,7 @@
 
 title: blank # the website title (if blank, full name will be used instead)
 first_name: Syed Ali Abbas
-middle_name: 
+middle_name:
 last_name: Abedi
 contact_note: >
   Feel free to reach out for collaborations or inquiries.
@@ -213,6 +213,20 @@ kramdown:
 # Includes & excludes
 include: ["_pages"]
 exclude:
+  - .DS_Store
+  - .openai/
+  - .agents/
+  - .codex/
+  - .claude/
+  - AGENTS.md
+  - legacy_html_backup/
+  - _posts/
+  - _books/
+  - _teachings/
+  - test/
+  - tests/
+  - dist/
+  - output/
   - al-folio-upgrade-report.md
   - bin/
   - CONTRIBUTING.md
@@ -338,8 +352,8 @@ display_categories: ["external-services"] # these categories will be displayed o
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [Einstein]
-  first_name: [Albert, A.]
+  last_name: [Abedi]
+  first_name: [Syed Ali Abbas, S. A. A., SAA]
 
   style: apa
   locale: en
@@ -359,6 +373,8 @@ scholar:
   details_link: Details
 
   query: "@*"
+  sort_by: year
+  order: descending
   group_by: year
   group_order: descending
 

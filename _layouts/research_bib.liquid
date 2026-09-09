@@ -1,0 +1,36 @@
+---
+---
+<article
+  class="publication-entry"
+  id="{{ entry.key }}"
+  data-year="{{ entry.year }}"
+  data-type="{{ entry.output_type }}"
+  data-search="{{ entry.title | strip_html | escape }} {{ entry.author | escape }} {{ entry.journal | escape }}"
+>
+  <div class="pub-meta">
+    {{ entry.year }} · {{ entry.journal -}}
+    {%- unless entry.output_type == 'article' %} · {{ entry.output_type | capitalize }}{% endunless %}
+  </div>
+  <h3>
+    {% if entry.html -%}
+      <a href="{{ entry.html }}">{{ entry.title }} ↗</a>
+    {%- else -%}
+      {{- entry.title -}}
+    {%- endif %}
+  </h3>
+  <p class="authors">{{ entry.author | replace: ' and ', '; ' }}</p>
+  <div class="pub-actions">
+    {% if entry.html -%}
+      <a href="{{ entry.html }}">
+        {%- if entry.output_type == 'dataset' %}View research data{% else %}View source{% endif %} ↗</a
+      >
+    {%- endif -%}
+    {%- if entry.pdf -%}
+      <a href="{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}">PDF ↓</a>
+    {%- endif %}
+  </div>
+  <details>
+    <summary>BibTeX citation</summary>
+    <pre>{{ entry.bibtex | escape }}</pre>
+  </details>
+</article>

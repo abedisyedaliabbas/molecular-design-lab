@@ -1,46 +1,24 @@
 ---
-layout: page
+layout: research_page
 title: Research
+description: Mechanistic quantum chemistry, molecular design, and delta machine learning for materials discovery.
 permalink: /projects/
-description: Exploring the intersection of quantum chemistry and machine learning.
 nav: true
 nav_order: 3
 ---
 
-<div class="row mb-5">
-    <div class="col-md-12">
-        <h2 class="mb-4">Research Highlights</h2>
-        <p class="lead">Excited states, intelligent design, and molecules that survive real measurements.</p>
-        <p>Quantum chemistry and machine learning in one loop: interpret mechanisms, propose structures, and stress-test ideas against spectra, stability, and imaging performance.</p>
-        
-        <ul class="list-group list-group-flush mt-4">
-            <li class="list-group-item bg-transparent border-0 px-0 mb-3">
-                <h5 class="fw-bold" style="color: var(--global-theme-color);"><i class="fa-solid fa-microchip me-2"></i>Automated Molecular Design</h5>
-                <p class="text-muted">Building automated quantum chemistry workflows and machine learning models to accelerate the discovery of new photoactive materials.</p>
-            </li>
-            <li class="list-group-item bg-transparent border-0 px-0 mb-3">
-                <h5 class="fw-bold" style="color: var(--global-theme-color);"><i class="fa-solid fa-bolt me-2"></i>Excited-State Dynamics</h5>
-                <p class="text-muted">Quantum chemical calculations (TD-DFT and variants, CASSCF/CASPT2) to unravel mechanisms behind photophysics, ultralong emission, and photoinduced processes.</p>
-            </li>
-            <li class="list-group-item bg-transparent border-0 px-0 mb-3">
-                <h5 class="fw-bold" style="color: var(--global-theme-color);"><i class="fa-solid fa-shield-halved me-2"></i>Photostability & Imaging</h5>
-                <p class="text-muted">AI-guided design of organic fluorophores for photoacoustic imaging and photothermal therapy, pairing machine learning with quantum chemical calculations. Multimodal ML (structures, spectra, microscopy) is next on my roadmap.</p>
-            </li>
-        </ul>
-    </div>
-</div>
-
-<hr>
-
-<div class="row mt-5">
-    <div class="col-md-12">
-        <h2 class="mb-4">Projects</h2>
-        
-        <div class="card shadow-sm border-0 rounded-4" style="background: var(--global-card-bg-color); border: 1px solid var(--global-divider-color) !important;">
-            <div class="card-body p-4">
-                <h3 class="h4 fw-bold mb-3"><a href="https://github.com/abedisyedaliabbas/Quantum-Chemistry-Software-Input-Generator" target="_blank" style="color: var(--global-theme-color); text-decoration: none;"><i class="fa-brands fa-github me-2"></i>Quantum Input Generator</a></h3>
-                <p class="text-muted mb-0">An automated tool for generating and managing quantum chemical input files for Gaussian and ORCA calculations, enabling high-throughput computational screening.</p>
-            </div>
-        </div>
-    </div>
-</div>
+<section class="research-detail" id="ai-materials">
+  <p class="eyebrow">Current work<br>NUS I-FIM · Research Fellow</p>
+  <div><h2>Delta learning for<br>materials discovery.</h2>
+  <p>I work on delta machine learning within the NRF Materials Data Foundry (MDF) project at the Institute for Functional Intelligent Materials, National University of Singapore.</p>
+  <p>The MDF is a collaboration between NUS I-FIM and the University of Toronto's Acceleration Consortium. It aims to connect synthesis routes, measurements, and simulations in a unified materials dataset, supporting AI-guided discovery.</p>
+  <p class="evidence">My contribution focuses on delta machine learning. This connects my background in quantum chemistry and computational workflows with the project's broader materials discovery programme.</p>
+  <details class="method-note"><summary>What is delta machine learning?</summary><p>Instead of learning a target property from scratch, a model learns the correction between a lower-cost baseline and a higher-fidelity reference. A prediction combines the baseline with that learned correction.</p><p class="learning-equation">Higher-fidelity estimate = baseline prediction + learned correction</p><p>Its usefulness depends on the reference data, the baseline method, and whether the model generalizes to the materials being studied.</p><a href="https://doi.org/10.1021/acs.jctc.5b00099">Foundational Δ-ML paper ↗</a></details>
+  <div class="link-row"><a class="text-link" href="{{ site.data.research.project_url }}">Official Materials Data Foundry announcement ↗</a><a class="text-link" href="{{ site.data.research.profile_url }}">NUS researcher profile ↗</a></div></div>
+</section>
+{% for direction in site.data.research.directions limit:2 %}
+<section class="research-detail"><p class="eyebrow">{{ direction.label }}</p><div><h2>{{ direction.title }}.</h2><p>{{ direction.text }}</p><p class="evidence">{{ direction.evidence }}</p><p>{{ direction.methods }}</p><a class="text-link" href="{{ '/publications/' | relative_url }}#{{ direction.publication }}">Related publication →</a></div></section>
+{% endfor %}
+<section class="research-detail"><p class="eyebrow">What I bring to a collaboration</p><div><h2>Calculations that help<br>answer the chemistry.</h2><p>My strengths span electronic-structure calculations, interpretation of excited-state pathways, and the translation of computational results into molecular design questions.</p><ul><li>Investigating photoinduced electron transfer, twisted intramolecular charge transfer, and excited-state proton transfer.</li><li>Relating structure and conformation to emission, photostability, and non-radiative decay.</li><li>Building reproducible Python workflows for quantum chemical calculations, output analysis, and property prediction.</li><li>Working with experimental colleagues to connect computed mechanisms with spectroscopy and imaging.</li></ul><a class="text-link" href="{{ '/cv/' | relative_url }}">Methods, training & experience →</a></div></section>
+<section class="tool-panel"><p class="eyebrow">Research resources</p><h2>A reproducible workflow for PET.</h2><p>Computational data and source code for a DFT/TD-DFT workflow investigating photoinduced electron transfer in fluorescent molecules, including inputs, outputs, and analysis scripts.</p><a class="text-link" href="https://zenodo.org/records/17374292">Explore the Zenodo record ↗</a></section>
+<section class="tool-panel"><p class="eyebrow">Software</p><h2>Quantum Chemistry Input Generator</h2><p>A tool for preparing quantum chemical input files and supporting repeatable computational workflows.</p><a class="text-link" href="https://github.com/abedisyedaliabbas/Quantum-Chemistry-Software-Input-Generator">View the repository ↗</a></section>

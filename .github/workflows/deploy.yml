@@ -1,11 +1,16 @@
 name: Deploy site
 
 on:
+  workflow_run:
+    workflows: ["Update Google Scholar Stats"]
+    types: [completed]
+    branches: [main, master]
   push:
     branches:
       - master
       - main
     paths:
+      - "_data/**"
       - "assets/**"
       - "**.bib"
       - "**.html"
@@ -33,6 +38,7 @@ on:
       - master
       - main
     paths:
+      - "_data/**"
       - "assets/**"
       - "**.bib"
       - "**.html"
@@ -62,6 +68,7 @@ permissions:
 
 jobs:
   deploy:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     # available images: https://github.com/actions/runner-images#available-images
     runs-on: ubuntu-latest
     steps:
