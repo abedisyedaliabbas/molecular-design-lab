@@ -2,59 +2,40 @@ cv:
   name: Syed Ali Abbas Abedi
   email: "abedisyedaliabbas@gmail.com"
   location: "Singapore"
-  url: "https://www.syedaliabbasabedi.com/"
-  
+  url: "https://abedisyedaliabbas.github.io/molecular-design-lab/"
+
   sections:
     Experience:
-      - company: National University of Singapore (NUS), Singapore
-        position: Researcher
+      - company: National University of Singapore, Institute for Functional Intelligent Materials (I-FIM), Singapore
+        position: Research Fellow
         start_date: 2026-08
         end_date: Present
         summary: >
-          Working on AI and ML in NUS Materials Discovery AI Techniques using multi-fidelity machine learning.
+          Working on delta machine learning within the NRF Materials Data Foundry project at NUS I-FIM.
       - company: Nanyang Technological University (NTU), School of Chemistry, Chemical Engineering and Biotechnology, Singapore
         position: Research Fellow
         start_date: 2026-01
         end_date: 2026-08
         summary: >
-          • Developed a hybrid quantum chemistry and ML workflow to screen 200+ molecular candidates for photostability and reactivity, ranking compounds by computed degradation susceptibility to prioritize experimental testing.
-          
-          • Built end-to-end Python pipelines that extract 40+ molecular descriptors from Gaussian output files, feed them into Scikit-learn regression models, and generate ranked candidate lists, cutting manual analysis time by 40%.
-          
-          • Investigated non-radiative decay pathways and spin-orbit coupling mechanisms to identify structural features that control molecular stability, directly informing experimental design decisions.
-          
-          • Collaborated with experimental teams across 4 countries, translating computational predictions into synthesis recommendations that contributed to 5 publications in 2025 and 2026.
+          Investigated excited-state pathways and molecular structure–property relationships, combining quantum chemical calculations with computational workflows and collaboration with experimental teams.
       - company: Singapore University of Technology and Design (SUTD), Singapore
         position: Research Fellow (Postdoctoral)
         start_date: 2024-09
         end_date: 2026-01
         summary: >
-          • Conducted computational studies to predict photothermal degradation pathways, correlating DFT-computed energy barriers with experimental failure modes across 50+ compounds with 85%+ agreement.
-          
-          • Benchmarked 12 DFT functionals and 8 basis sets with solvation models (PCM/CPCM) to establish an optimal accuracy-vs-cost protocol for reactivity assessments, reducing per-job compute time by 30%.
-          
-          • Automated parsing and statistical analysis of 10,000+ quantum chemistry log files using Bash/Python, enabling rapid identification of stability trends across heterogeneous datasets.
-          
-          • Published a first-author computational protocol in Nature Protocols for diagnosing photoinduced electron transfer mechanisms, providing a validated and reproducible workflow now adopted by external groups.
+          Conducted computational research on organic fluorophores, photostability, and photoinduced processes. Developed workflows for quantum chemical calculations and analysis.
       - company: University College London (UCL) & Queen Mary University of London, UK
         position: Visiting Researcher
         start_date: 2023-04
         end_date: 2023-07
         summary: >
-          • Collaborated with experimental scientists to validate multi-reference CASSCF models for reactive potential energy surfaces involving conical intersections, contributing to 2 joint publications.
-          
-          • Resolved persistent convergence issues in high-level excited-state calculations, enabling reliable mechanistic modelling of chemical degradation pathways.
+          Worked on excited-state decay pathways and photochemical simulations, including multireference electronic-structure methods and nonadiabatic dynamics.
       - company: Singapore University of Technology and Design (SUTD), Singapore
         position: Graduate Research Assistant
         start_date: 2020-08
         end_date: 2024-06
         summary: >
-          • Developed and validated computational protocols for predicting molecular reactivity and conformational stability using DFT/TD-DFT, applied across 12 co-authored studies on structurally diverse compound families.
-          
-          • Built reusable Python toolkits for automated quantum chemistry job submission, output parsing, and property extraction on HPC clusters, adopted by 8 lab members.
-          
-          • Worked with heterogeneous experimental and computed datasets to establish structure-property relationships linking molecular design to functional outcomes.
-
+          Investigated the computational design and photophysical mechanisms of fluorophores, focusing on excited-state conformational dynamics under the supervision of Prof. Xiaogang Liu.
     Education:
       - institution: Singapore University of Technology and Design, Singapore
         studyType: PhD in Science, Mathematics & Technology
@@ -62,7 +43,7 @@ cv:
         end_date: 2024
         summary: >
           Defence ("viva"): 04/06/2024 – Awarded: 30/06/2024.
-          
+
           **Thesis:** "Computational Design and Mechanistic Investigation of Fluorophores Based on Excited-State Conformational Dynamics"
       - institution: Lahore University of Management Sciences, Pakistan
         studyType: MS in Mathematics
@@ -70,7 +51,7 @@ cv:
         end_date: 2019
         summary: >
           Awarded: 30/06/2019.
-          
+
           **Thesis:** "Predator-Prey Model with Age Structures"
       - institution: University of Engineering & Technology, Lahore, Pakistan
         studyType: BSc in Chemical Engineering and Technology

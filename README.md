@@ -9,6 +9,7 @@ This repository contains the source code for the website hosted at [abedisyedali
 I am a Computational Chemist specializing in AI-driven molecular design, excited-state dynamics, and the photophysics of organic fluorophores. This website serves as a central hub for my academic CV, research projects, publications, and scientific tools.
 
 ### Features
+
 - **Dynamic CV**: Auto-generated curriculum vitae powered by YAML data.
 - **Publications Library**: Complete searchable bibliography of my peer-reviewed papers.
 - **Automated Scholar Metrics**: Nightly GitHub Action updates to fetch live citation counts from Google Scholar.
@@ -35,4 +36,4 @@ If you are a collaborator or just looking to run this site locally:
 
 ---
 
-*This website is built using the open-source [al-folio](https://github.com/alshedivat/al-folio) Jekyll theme for academics.*
+_This website is built using the open-source [al-folio](https://github.com/alshedivat/al-folio) Jekyll theme for academics._

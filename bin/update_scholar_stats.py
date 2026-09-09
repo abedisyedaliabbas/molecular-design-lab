@@ -1,43 +1,94 @@
-import requests
-import re
+"""Refresh a complete, dated Scholar snapshot; preserve it on fetch/parse failure."""
+from datetime import datetime, timezone
+from html.parser import HTMLParser
+from pathlib import Path
 import json
 import os
+import sys
+import tempfile
 
-url = "https://scholar.google.com/citations?user=bcqvfOUAAAAJ&hl=en"
-headers = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
-}
+import requests
 
-try:
-    response = requests.get(url, headers=headers)
-    response.raise_for_status()
-    text = response.text
-    
+URL = 'https://scholar.google.com/citations?user=bcqvfOUAAAAJ&hl=en'
+STATS_FILE = Path(__file__).resolve().parents[1] / '_data' / 'scholar_stats.json'
+
+
+class StatsTableParser(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.in_table = False
+        self.in_cell = False
+        self.cell = []
+        self.row = []
+        self.rows = []
+
+    def handle_starttag(self, tag, attrs):
+        if tag == 'table' and dict(attrs).get('id') == 'gsc_rsb_st':
+            self.in_table = True
+        if not self.in_table:
+            return
+        if tag == 'tr':
+            self.row = []
+        elif tag in ('td', 'th'):
+            self.in_cell = True
+            self.cell = []
+
+    def handle_data(self, data):
+        if self.in_table and self.in_cell:
+            self.cell.append(data)
+
+    def handle_endtag(self, tag):
+        if not self.in_table:
+            return
+        if tag in ('td', 'th'):
+            self.row.append(''.join(self.cell).strip())
+            self.in_cell = False
+        elif tag == 'tr':
+            self.rows.append(self.row)
+        elif tag == 'table':
+            self.in_table = False
+
+
+def parse_stats(html):
+    parser = StatsTableParser()
+    parser.feed(html)
+    labels = {'Citations': 'citations', 'h-index': 'h_index', 'i10-index': 'i10_index'}
     stats = {}
-    
-    citations = re.search(r'Citations</a></td><td class=\"gsc_rsb_std\">(\d+)</td>', text)
-    h_index = re.search(r'h-index</a></td><td class=\"gsc_rsb_std\">(\d+)</td>', text)
-    i10 = re.search(r'i10-index</a></td><td class=\"gsc_rsb_std\">(\d+)</td>', text)
-    
-    if citations:
-        stats["citations"] = int(citations.group(1))
-    if h_index:
-        stats["h_index"] = int(h_index.group(1))
-    if i10:
-        stats["i10_index"] = int(i10.group(1))
-        
-    if stats:
-        # Save to _data/scholar_stats.json
-        data_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), '_data')
-        os.makedirs(data_dir, exist_ok=True)
-        stats_file = os.path.join(data_dir, 'scholar_stats.json')
-        
-        with open(stats_file, 'w') as f:
-            json.dump(stats, f, indent=2)
-            
-        print(f"Successfully updated {stats_file} with: {stats}")
-    else:
-        print("Could not find stats in the HTML.")
-        
-except Exception as e:
-    print(f"Error fetching Google Scholar stats: {e}")
+    for row in parser.rows:
+        if len(row) >= 2 and row[0] in labels:
+            value = row[1].replace(',', '').replace('\xa0', '').replace(' ', '')
+            if not value.isdecimal():
+                raise ValueError('Scholar returned a non-numeric metric')
+            stats[labels[row[0]]] = int(value)
+    if stats.keys() != set(labels.values()):
+        raise ValueError('Scholar did not return all three metrics; the previous snapshot is retained')
+    return stats
+
+
+def update_stats(path=STATS_FILE, session=requests):
+    response = session.get(URL, headers={'User-Agent': 'Mozilla/5.0'}, timeout=30)
+    response.raise_for_status()
+    stats = parse_stats(response.text)
+    stats.update(updated_at=datetime.now(timezone.utc).date().isoformat(),
+                 source='Google Scholar', source_url=URL)
+    path = Path(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    name = None
+    try:
+        with tempfile.NamedTemporaryFile(mode='w', dir=path.parent, delete=False, encoding='utf-8') as output:
+            name = output.name
+            json.dump(stats, output, indent=2)
+            output.write('\n')
+        os.replace(name, path)
+    finally:
+        if name and os.path.exists(name):
+            os.unlink(name)
+    return stats
+
+
+if __name__ == '__main__':
+    try:
+        print(json.dumps(update_stats(), indent=2))
+    except (requests.RequestException, ValueError, OSError) as error:
+        print(f'Scholar refresh failed: {error}', file=sys.stderr)
+        sys.exit(1)

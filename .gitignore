@@ -15,3 +15,7 @@ node_modules/
 output/playwright/
 test-results/
 vendor
+
+dist/
+__pycache__/
+*.pyc

@@ -437,11 +437,7 @@ If you're stuck:
    - [GitHub Discussions](https://github.com/alshedivat/al-folio/discussions) – Q&A from community
    - [GitHub Issues](https://github.com/alshedivat/al-folio/issues) – Bug reports and feature requests
 
-3. **Get help from AI:**
-   - Use the **GitHub Copilot Customization Agent** (requires Copilot subscription) to get step-by-step help
-   - See [CUSTOMIZE.md § GitHub Copilot Customization Agent](CUSTOMIZE.md#github-copilot-customization-agent)
-
-4. **Create a new discussion:**
+3. **Create a new discussion:**
    - [Ask a question](https://github.com/alshedivat/al-folio/discussions/new?category=q-a) on GitHub
    - Include error messages and what you're trying to do
 
