@@ -41,10 +41,11 @@ module.exports = {
       },
     },
     {
-      name: "mobile",
+      name: "ios",
       use: {
         ...devices["iPhone 12"],
       },
     },
+    { name: "android", use: { ...devices["Pixel 7"] } },
   ],
 };

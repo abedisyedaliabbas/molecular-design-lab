@@ -24,7 +24,7 @@ test("portrait remains compact and navigation works", async ({ page }, testInfo)
   const portrait = await page.locator(".portrait-frame").boundingBox();
   expect(portrait.width).toBeLessThanOrEqual(210);
   expect(portrait.height).toBeLessThanOrEqual(230);
-  if (testInfo.project.name === "mobile") {
+  if (testInfo.project.name !== "desktop") {
     const menu = page.getByRole("button", { name: "Menu", exact: true });
     await expect(page.getByRole("navigation")).toBeHidden();
     await menu.click();
@@ -57,4 +57,25 @@ test("publication filters, empty state and source citations", async ({ page }) =
   await expect(page.getByRole("combobox", { name: "Year", exact: true })).toHaveValue("2026");
   await page.locator(".publication-entry:visible summary").first().click();
   await expect(page.locator(".publication-entry:visible details").first()).toHaveAttribute("open", "");
+});
+
+test("phone controls are touch-sized across narrow and landscape views", async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name === "desktop", "Phone layout check");
+  for (const width of [320, 390, 412, 844]) {
+    await page.setViewportSize({ width, height: width === 844 ? 390 : 844 });
+    await page.goto(base);
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+    if (width <= 580) {
+      const menu = page.getByRole("button", { name: "Menu", exact: true });
+      const box = await menu.boundingBox();
+      expect(box.width).toBeGreaterThanOrEqual(44);
+      expect(box.height).toBeGreaterThanOrEqual(44);
+      await menu.tap();
+      await expect(page.getByRole("navigation")).toBeVisible();
+      await page.getByRole("link", { name: "Publications", exact: true }).tap();
+      await expect(page.locator("h1")).toHaveText("Publications");
+      expect(await page.locator("#publication-search").evaluate((input) => parseFloat(getComputedStyle(input).fontSize))).toBeGreaterThanOrEqual(16);
+    }
+    await page.screenshot({ path: testInfo.outputPath(`phone-${width}.png`) });
+  }
 });

@@ -1223,3 +1223,49 @@ h2 {
     padding-top: 12px;
   }
 }
+
+/* Comfortable phone navigation and form controls. */
+@media (max-width: 580px) {
+  .header-inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 44px 44px;
+    gap: 8px;
+  }
+  .wordmark {
+    min-width: 0;
+    white-space: normal;
+  }
+  .wordmark > span {
+    min-width: 0;
+  }
+  .menu-toggle {
+    width: 44px;
+    height: 44px;
+    margin: 0;
+    padding: 0;
+  }
+  .theme-toggle {
+    width: 44px;
+    min-width: 44px;
+    height: 44px;
+  }
+  .main-nav {
+    grid-column: 1 / -1;
+  }
+  .main-nav a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+  .filter-bar input,
+  .filter-bar select {
+    font-size: 16px;
+    min-height: 44px;
+  }
+  .pub-actions a,
+  .pub-actions button,
+  details summary {
+    min-height: 44px;
+    align-content: center;
+  }
+}
