@@ -1027,3 +1027,82 @@ h2 {
     min-height: 235px;
   }
 }
+
+/* Compact researcher portrait and delta-learning identity. */
+.brand-symbol {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  color: var(--ink);
+}
+.brand-accent {
+  fill: var(--accent);
+}
+.hero {
+  grid-template-columns: minmax(0, 1.9fr) minmax(230px, 0.85fr);
+  gap: 70px;
+}
+.profile-panel {
+  width: 100%;
+  max-width: 285px;
+  justify-self: end;
+  align-self: center;
+}
+.portrait-frame {
+  width: 154px;
+  height: 172px;
+  min-height: 0;
+  margin: 0 0 23px;
+}
+.portrait-frame .portrait {
+  min-height: 0;
+  object-position: right 85%;
+  transform: scale(1.6);
+  transform-origin: 100% 70%;
+}
+.affiliation {
+  background: transparent;
+  border-top: 1px solid var(--line);
+  border-left: 0;
+  padding: 22px 0 0;
+}
+.affiliation h2 {
+  font-size: 1.5rem;
+}
+@media (max-width: 800px) {
+  .hero {
+    gap: 35px;
+    grid-template-columns: minmax(0, 1.6fr) minmax(200px, 1fr);
+  }
+}
+@media (max-width: 580px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .profile-panel {
+    max-width: none;
+    display: grid;
+    grid-template-columns: 108px 1fr;
+    gap: 20px;
+    justify-self: start;
+    border-top: 1px solid var(--line);
+    padding-top: 22px;
+  }
+  .portrait-frame {
+    width: 108px;
+    height: 124px;
+    min-height: 0;
+    margin: 0;
+  }
+  .affiliation {
+    border: 0;
+    padding: 0;
+  }
+  .affiliation h2 {
+    font-size: 1.4rem;
+  }
+  .affiliation .eyebrow {
+    margin-bottom: 8px;
+  }
+}
