@@ -1,6 +1,11 @@
 module.exports = {
   content: ["_site/**/*.html", "_site/**/*.js"],
-  css: ["_site/assets/css/*.css"],
+  // The research stylesheet contains menu and theme states selected at runtime.
+  // Keep it intact; optimize only the inherited theme stylesheets.
+  css: require("node:fs")
+    .readdirSync("_site/assets/css")
+    .filter((file) => file.endsWith(".css") && file !== "research.css")
+    .map((file) => `_site/assets/css/${file}`),
   output: "_site/assets/css/",
   skippedContentGlobs: ["_site/assets/**/*.html"],
   safelist: [
