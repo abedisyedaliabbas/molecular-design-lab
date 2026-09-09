@@ -1,58 +1,41 @@
 name: Render a CV
 on:
   push:
-    branches:
-      - main
-      - master
+    branches: [main, master]
     paths:
       - "_data/cv.yml"
-      - "assets/rendercv/design.yaml"
-      - "assets/rendercv/locale.yaml"
-      - "assets/rendercv/settings.yaml"
-  workflow_call:
+      - "_data/research.yml"
+      - "bin/build_cv_pdf.py"
+      - ".github/workflows/render-cv.yml"
   workflow_dispatch:
 permissions:
   contents: write
+concurrency:
+  group: render-cv
+  cancel-in-progress: false
 jobs:
   rendercv:
-    name: RenderCV
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Install RenderCV
-        run: |
-          pip install -r requirements.txt
-      - name: RenderCV
-        run: |
-          cv_file=$(find _data  -maxdepth 1 -type f \( -name "cv.yaml" -o -name "cv.yml" \))
-          if [ -z "$cv_file" ]; then
-            echo "No cv.yml file found!"
-            exit 1
-          fi
-          rendercv_dir=$(find assets -maxdepth 1 -type d -name "rendercv")
-          if [ -z "$rendercv_dir" ]; then
-            echo "No RenderCV config directory found!"
-            exit 1
-          fi
-          settings=$(find $rendercv_dir -maxdepth 1 -type f \( -name "settings.yaml" -o -name "settings.yml" \))
-          if [ -z "$settings" ]; then
-            echo "Missing RenderCV config file!"
-            exit 1
-          fi
-          rendercv render $cv_file --settings $settings
-          rm assets/rendercv/rendercv_output/*.typ
-      - name: Upload rendercv_output as an artifact
+      - name: Install PDF dependencies
+        run: pip install reportlab PyYAML
+      - name: Generate the research CV
+        run: python bin/build_cv_pdf.py
+      - name: Upload PDF
         uses: actions/upload-artifact@v4
         with:
-          name: RenderCV Output
-          path: assets/rendercv/rendercv_output
-      - name: Push the changes
+          name: research-cv
+          path: assets/pdf/cv.pdf
+      - name: Save updated CV
         run: |
-          git config --global user.name "${{ github.actor }}"
-          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
-          git add -A
-          git commit -m "chore: render the latest CV"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/pdf/cv.pdf
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Update research CV PDF"
+          git pull --rebase
           git push

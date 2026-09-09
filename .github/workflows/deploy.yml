@@ -2,7 +2,7 @@ name: Deploy site
 
 on:
   workflow_run:
-    workflows: ["Update Google Scholar Stats"]
+    workflows: ["Update Google Scholar Stats", "Render a CV"]
     types: [completed]
     branches: [main, master]
   push:
