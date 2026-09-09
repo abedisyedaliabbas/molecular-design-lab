@@ -27,7 +27,8 @@
           {%- include research_logo.liquid -%}
           <span>Molecular Design Lab<small>Syed Ali Abbas Abedi</small></span></a
         >
-        <nav aria-label="Main navigation" class="main-nav">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" hidden>Menu</button>
+        <nav id="primary-nav" aria-label="Main navigation" class="main-nav">
           <a
             href="{{ '/' | relative_url }}"
             {% if page.permalink == '/' %}
