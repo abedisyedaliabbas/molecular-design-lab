@@ -1,4 +1,4 @@
-"""Refresh a complete, dated Scholar snapshot; preserve it on fetch/parse failure."""
+"""Refresh a complete, dated Scholar snapshot with an optional API fallback."""
 from datetime import datetime, timezone
 from html.parser import HTMLParser
 from pathlib import Path
@@ -10,7 +10,10 @@ import tempfile
 import requests
 
 URL = 'https://scholar.google.com/citations?user=bcqvfOUAAAAJ&hl=en'
+AUTHOR_ID = 'bcqvfOUAAAAJ'
+SERPAPI_URL = 'https://serpapi.com/search'
 STATS_FILE = Path(__file__).resolve().parents[1] / '_data' / 'scholar_stats.json'
+METRIC_KEYS = ('citations', 'h_index', 'i10_index')
 
 
 class StatsTableParser(HTMLParser):
@@ -65,12 +68,68 @@ def parse_stats(html):
     return stats
 
 
-def update_stats(path=STATS_FILE, session=requests):
+def parse_serpapi_stats(payload):
+    """Extract all-time metrics from a SerpAPI Google Scholar Author result."""
+    if not isinstance(payload, dict):
+        raise ValueError('SerpAPI returned an invalid response')
+    if payload.get('error'):
+        raise ValueError('SerpAPI returned an error')
+
+    aliases = {
+        'citations': 'citations',
+        'h_index': 'h_index',
+        'indice_h': 'h_index',
+        'i10_index': 'i10_index',
+        'indice_i10': 'i10_index',
+    }
+    stats = {}
+    cited_by = payload.get('cited_by')
+    table = cited_by.get('table') if isinstance(cited_by, dict) else None
+    if not isinstance(table, list):
+        raise ValueError('SerpAPI did not return a metrics table')
+    for row in table:
+        if not isinstance(row, dict):
+            continue
+        for source_key, values in row.items():
+            target_key = aliases.get(source_key)
+            if target_key and isinstance(values, dict):
+                value = values.get('all')
+                if isinstance(value, int) and not isinstance(value, bool) and value >= 0:
+                    stats[target_key] = value
+
+    if stats.keys() != set(METRIC_KEYS):
+        raise ValueError('SerpAPI did not return all three Scholar metrics')
+    return stats
+
+
+def fetch_direct(session):
     response = session.get(URL, headers={'User-Agent': 'Mozilla/5.0'}, timeout=30)
     response.raise_for_status()
-    stats = parse_stats(response.text)
+    return parse_stats(response.text)
+
+
+def fetch_serpapi(api_key, session):
+    response = session.get(
+        SERPAPI_URL,
+        params={
+            'engine': 'google_scholar_author',
+            'author_id': AUTHOR_ID,
+            'hl': 'en',
+            'api_key': api_key,
+        },
+        timeout=30,
+    )
+    response.raise_for_status()
+    try:
+        payload = response.json()
+    except requests.exceptions.JSONDecodeError as error:
+        raise ValueError('SerpAPI returned invalid JSON') from error
+    return parse_serpapi_stats(payload)
+
+
+def write_snapshot(path, stats, retrieved_via):
     stats.update(updated_at=datetime.now(timezone.utc).date().isoformat(),
-                 source='Google Scholar', source_url=URL)
+                 source='Google Scholar', source_url=URL, retrieved_via=retrieved_via)
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
     name = None
@@ -86,9 +145,58 @@ def update_stats(path=STATS_FILE, session=requests):
     return stats
 
 
+def load_snapshot(path):
+    """Return an existing complete snapshot, or raise if it cannot be trusted."""
+    path = Path(path)
+    try:
+        snapshot = json.loads(path.read_text(encoding='utf-8'))
+    except (OSError, json.JSONDecodeError) as error:
+        raise RuntimeError('no valid previous Scholar snapshot is available') from error
+    if not all(isinstance(snapshot.get(key), int) and not isinstance(snapshot[key], bool)
+               and snapshot[key] >= 0 for key in METRIC_KEYS):
+        raise RuntimeError('the previous Scholar snapshot is incomplete')
+    return snapshot
+
+
+def describe_error(error):
+    """Describe a provider failure without leaking request URLs or API keys."""
+    if isinstance(error, requests.HTTPError) and error.response is not None:
+        return f'HTTP {error.response.status_code}'
+    return type(error).__name__
+
+
+def update_stats(path=STATS_FILE, session=requests, api_key=None):
+    """Try Scholar, then SerpAPI; retain a valid snapshot if both fail."""
+    failures = []
+    try:
+        return write_snapshot(path, fetch_direct(session), 'Google Scholar')
+    except (requests.RequestException, ValueError) as error:
+        failures.append(f'direct Scholar: {describe_error(error)}')
+
+    api_key = api_key if api_key is not None else os.environ.get('SERPAPI_API_KEY')
+    if api_key:
+        try:
+            return write_snapshot(path, fetch_serpapi(api_key, session), 'SerpAPI')
+        except (requests.RequestException, ValueError) as error:
+            failures.append(f'SerpAPI: {describe_error(error)}')
+    else:
+        failures.append('SerpAPI: not configured')
+
+    snapshot = load_snapshot(path)
+    detail = '; '.join(failures)
+    print(
+        f'::warning title=Scholar snapshot retained::{detail}. '
+        f'Keeping snapshot dated {snapshot.get("updated_at", "unknown")}.',
+        file=sys.stderr,
+    )
+    return None
+
+
 if __name__ == '__main__':
     try:
-        print(json.dumps(update_stats(), indent=2))
-    except (requests.RequestException, ValueError, OSError) as error:
+        result = update_stats()
+        if result is not None:
+            print(json.dumps(result, indent=2))
+    except (RuntimeError, OSError) as error:
         print(f'Scholar refresh failed: {error}', file=sys.stderr)
         sys.exit(1)
