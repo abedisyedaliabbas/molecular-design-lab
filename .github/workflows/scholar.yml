@@ -35,6 +35,9 @@ jobs:
 
       - name: Run scholar stats updater
         run: python bin/update_scholar_stats.py
+        env:
+          # Optional fallback when Scholar blocks GitHub-hosted runners.
+          SERPAPI_API_KEY: ${{ secrets.SERPAPI_API_KEY }}
 
       - name: Commit and push changes
         run: |
